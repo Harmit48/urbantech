@@ -1,0 +1,560 @@
+body{
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* home image */
+
+.home-1{
+  background-image: url(../Img/HomeImage/home3.jpeg);
+  width: 100%;
+  height: 89vh;
+  background-repeat: none;
+}
+
+.text-1{
+  font-family: "Roboto Condensed", sans-serif;
+  margin-top: 0%;
+  padding-top: 270px;
+  padding-left: 77px;
+  font-weight: 600;
+  font-size: 47px;
+}
+
+.text-2{
+  font-family: "Roboto Condensed", sans-serif;
+  margin-top: -35px;
+  padding-left: 81px;
+  font-size: 17px;
+}
+
+/* shop now button(home image) */
+.cta {
+  font-family: "Raleway", sans-serif;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding-left: 81px;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 20px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* all category */
+
+.all{
+  font-family: "Nunito", sans-serif;
+}
+.all-cat{
+  font-family: "Nunito", sans-serif;
+  padding-left: 77px;
+  padding-top: 30px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 40px;
+  font-weight: 500;
+  color: #121212;
+}
+
+.all-text{
+  margin-bottom: 0%;
+}
+
+.con{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 70px;
+  margin-bottom: 40px;
+  padding-left: 77px;
+  padding-right: 77px;
+}
+
+.con-1, .con-2, .con-3, .con-4, .con-5, .con-6{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 463px;
+  border: 1px solid #121212;
+  border-radius: 15px;
+  margin-bottom: 35px;
+  transition: 0.5s linear;
+}
+
+.con-1:hover, .con-2:hover, .con-3:hover, .con-4:hover, .con-5:hover, .con-6:hover{
+  background-color: #0B1616;
+  color: #f2f2f2;
+
+}
+
+.con-1-img img{
+  width: 100px;
+  height: 100px;
+  padding-top: 10px;
+  padding-right: 11px;
+  align-items: center;
+}
+
+.con-1-text{
+  font-size: 24px;
+  padding-left: 30px;
+}
+
+
+/* Top Brands */
+.top-brand{
+  font-family: "Nunito", sans-serif;
+  margin-top: 100px;
+  width: 100vw;
+}
+
+.top-brands-text{
+  padding-left: 77px;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.top-11-image{
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 77px;
+  padding-right: 77px;
+  padding-top: 10px;
+}
+
+.top-1-img img{
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: none;
+}
+
+/* two Image Containar */
+.row {
+  width: 100%;
+  height: 100%;
+}
+
+.row-sec {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.col {
+  width: 750px;
+  height: 700px;
+  border-radius: 2vw;
+  background-color: #EBECEE;
+  /* background-color: #f2f2f2; */
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.col-1{
+  margin-top: 110px;
+  margin-left: 70px;
+  margin-bottom: 60px;
+}
+
+.col-2{
+  margin-top: 110px;
+  margin-right: 70px;
+  margin-bottom: 60px;
+}
+
+
+.img {
+  position: absolute;
+  
+}
+
+.Ipad {
+  right: -17.7vw;
+  bottom: -16vh;
+  width: 123%;
+  height: 109%;
+}
+
+.AppleWatch {
+  right: -20.5vw;
+  bottom: -10vh;
+  width: 100%;
+  height: 100%;
+}
+
+.col-detail {
+  padding: 5vh 4vw;
+}
+
+.heading,
+.para{
+  color: #171717;
+}
+
+.heading,
+.para {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.heading {
+  font-size: 6.5vh;
+  line-height: 1.2;
+  margin-bottom: 4vh;
+}
+
+.para {
+  font-size: 3vh;
+  line-height: 1.5;
+  margin-bottom: 5vh;
+  font-weight: 300;
+}
+
+.Ipad-btn {
+  font-size: 2vh;
+  font-family: "Raleway", sans-serif;
+  padding: 2vh 2vw;
+  background-color: transparent;
+  border: 0.1vw solid #171717;
+  border-radius: 1vw;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.Ipad-btn:hover,
+.AppleWatch-btn:hover{
+  color: #EBECEE;
+  background-color: #171717;
+  box-shadow: 0 0 10vh 1vh #171717;
+}
+
+
+/* New Product */
+.newproduct-text{
+  font-family: "Nunito", sans-serif;
+  font-size: 35px;
+  padding-left: 77px;
+  padding-top: 20px;
+}
+
+.newproduct-image{
+  display: flex;
+  margin-top: 70px;
+  margin-bottom: 100px;
+  margin-left: 80px;
+  margin-right: 77px;
+}
+
+.newproduct-image-1 img{
+  width: 700px;
+  height: 400px;
+  border-radius: 25px;
+}
+
+.newproduct-image-2 img{
+  width: 400px;
+  height: 400px;
+  border-radius: 25px;
+  margin-left: 20px;
+}
+
+.newproduct-image-3 img{
+  width: 400px;
+  height: 400px;
+  border-radius: 25px;
+  margin-left: 20px;
+}
+
+/* All Apple Product */
+.all-product-text{
+  font-size: 35px;
+  font-family: "Nunito", sans-serif;
+  margin-top: 30px;
+  /* margin-left: 77px; */
+}
+
+.all-product{
+  padding-left: 77px;
+  padding-right: 77px;
+}
+
+.all-product-cart {
+  display: flex;
+  gap: 30px 51px;
+  flex-wrap: wrap;
+}
+
+.all-cat-1{
+  width: 343px;
+  height: 440px; 
+  
+}
+
+.all-cart-1-image{
+  background-color: #EBECEE;
+  border-radius: 25px;
+}
+.all-cat-1 img{
+  transition: 0.5s;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.all-cat-1 img:hover{
+  transform: scale(1.1, 1.1)translateY(-20px);
+}
+
+.all-cart-1-text{
+  font-family: "Nunito", sans-serif;
+  
+}
+
+.all-cart-1-text-name-phone{
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 10px;
+  margin-top: -12px;
+}
+
+.all-cart-1-text-name{
+  margin-top: -144px;
+}
+
+.a-c-1-t-n-1{
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: -13px;
+  margin-left: 5px;
+}
+.ph{
+  font-weight: 900;
+  margin-top: 50px;
+}
+
+.all-cart-1-icon{
+  margin-left: 310px;
+  padding-top: 40px;
+  padding: 6px;
+  font-size: 25px;
+  font-weight: 300;
+  background-color: transparent;
+  border: 1px solid #0B1616;
+  border-radius: 50%;
+  transition: 0.5s linear;
+}
+
+.all-cart-1-icon:hover{
+  background-color: #0B1616;
+  color: #FF5F00;
+}
+
+.all-cart-1-text-icon {
+  margin-top: 18px;
+  margin-bottom: 100px;
+}
+
+.all-product-text-1{
+  font-size: 35px;
+  font-family: "Nunito", sans-serif;
+  margin-top: 140px;
+  /* margin-left: 77px; */
+}
+
+.all-product-cart:hover>.all-cat-1:not(:hover) {
+  filter: grayscale(100%) blur(1px);
+}
+
+
+/* All Product */
+.all-product-2{
+  padding-left: 77px;
+  padding-right: 77px;
+}
+
+.all-product-text-2{
+  font-size: 35px;
+  font-family: "Nunito", sans-serif;
+  margin-top: 30px;
+  /* margin-left: 77px; */
+}
+
+.all-product-cart-2 {
+  display: flex;
+  gap: 30px 51px;
+  flex-wrap: wrap;
+  max-height: 900px;
+  overflow: hidden;
+  transition: max-height 0.7s ease-in;
+}
+
+.all-product-cart-2.expand {
+  max-height: 2700px; /*Adjust height to show all rows*/
+}
+
+.view-more-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #0B1616;
+  background-color: transparent;
+  border-radius: 10px;
+  transition: 0.4s linear;
+ }
+
+.view-more-btn:hover{
+  background-color: #0B1616;
+  color: #EBECEE;
+}
+
+.all-cart-1-image-2{
+  background-color: #EBECEE;
+  border-radius: 25px;
+}
+
+.all-cat-2-1 img{
+  transition: 0.5s;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.all-cat-2-1{
+  width: 343px;
+  height: 440px; 
+}
+
+.all-cat-2-1 img:hover{
+  transform: scale(1.1, 1.1)translateY(-20px);
+}
+
+.all-cart-1-text-2{
+  font-family: "Nunito", sans-serif;
+}
+
+.all-cart-1-text-name-2{
+  margin-top: -144px;
+}
+
+
+.all-cart-1-text-name-phone-2{
+  font-size: 16px;
+  font-weight: 500;
+  padding-left: 10px;
+  margin-top: -12px;
+}
+
+.a-c-1-t-n-1-2{
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  margin-top: -13px;
+  margin-left: 5px;
+}
+.ph{
+  font-weight: 900;
+  margin-top: 50px;
+}
+
+.all-cart-1-icon-2{
+  margin-left: 310px;
+  padding-top: 40px;
+  padding: 6px;
+  font-size: 25px;
+  font-weight: 300;
+  background-color: transparent;
+  border: 1px solid #0B1616;
+  border-radius: 50%;
+  transition: 0.5s linear;
+}
+
+.all-cart-1-icon-2:hover{
+  background-color: #0B1616;
+  color: #FF5F00;
+}
+
+.all-cart-1-text-icon-2 {
+  margin-top: 18px;
+  margin-bottom: 100px;
+}
+
+.all-product-text-2{
+  font-size: 35px;
+  font-family: "Nunito", sans-serif;
+  margin-top: 140px;
+  /* margin-left: 77px; */
+}
+
+.all-product-cart-2:hover>.all-cat-2-1:not(:hover){
+  filter: grayscale(100%) blur(1px);
+}
+
+.all-cart-1-image-Ambrane{
+  background-color: #EBECEE;
+  border-radius: 25px;
+  width: 350px;
+  height: 350px;
+}
+
+.all-cart-1-image-Ambrane img{
+  transition: 0.5s;
+  width: 90%;
+  height: 90%;
+  padding-top: 30px;
+}

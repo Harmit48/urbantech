@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="../css/my profile.css">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-box">
+            <div class="left">
+                <h1>User Profile</h1>
+                <div class="details">
+                    <input placeholder="Name" type="text" id="name">
+                    <input placeholder="Email" type="email" id="email">
+                    <input placeholder="Mobile Number" type="text" id="mobile">
+                    <input placeholder="Balance" type="text" id="balance">
+                    <input placeholder="Order" type="number" id="orders">
+                    <input placeholder="Address" type="text" id="address">
+                    <input type="file" id="photoInput">
+                    <input type="submit" value="Save Changes" onclick="updateProfile()">
+                </div>
+            </div>
+            <div class="right">
+                <img src="../Img/HomeImage/user.png" alt="User Photo" id="userPhoto">
+                <div class="follow">
+                    <p>Follow us on:</p>
+                    <a href="#">Twitter</a>
+                    <a href="#">Facebook</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="message-box" id="messageBox">
+        <div id="messageContent"></div>
+        <button onclick="redirectToHome()">OK</button>
+    </div>
+    <script src="../JavaScript/my profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/laptop.css">
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- page title -->
+    <title>Laptop</title>
+</head>
+<body>
+<!-- Navbar -->
+<section>
+    <div class="nav-1">
+        <div class="navbar-left">
+            <div class="logo" onclick="window.location.href = 'index.html';">URBANTECH</div>
+        </div>
+        <div class="navbar-right">
+            <div class="searchBox">
+                <input class="searchInput" type="text" name="" placeholder="Search">
+                <button class="searchButton" href="#"><i class="ph-bold ph-magnifying-glass"></i></button>
+            </div>
+            <!-- Shop button -->
+            <div class="playground">
+                <button class="btn btn-1-3-4" id="shop-button">
+                    <i class="ph ph-tote"></i>
+                    <span class="shop-con cart-icon">Shop</span>
+                </button>
+                <div class="dropdown-content" id="dropdown-content">
+                    <a href="#">All Product</a>
+                    <a href="../html/mobile.html">Mobile</a>
+                    <a href="../html/laptop.html">Laptop</a>
+                    <a href="../html/tablet.html">Tablets & iPads</a>
+                    <a href="../html/HeadPhone.html">Audio Product</a>
+                    <a href="../html/smartwatch.html">SmartWatches</a>
+                    <a href="#">Accessories</a>
+                </div>
+            </div>
+            <!-- Profile Button -->
+            <div class="playground-1">
+                <button class="btn-1 btn-1-3-4" id="profile-button">
+                    <i class="ph-bold ph-user cart-icon-1"></i>
+                    <span class="shop-con-1">Profile</span>
+                </button>
+                <div class="dropdown-content-1" id="dropdown-content-1">
+                    <a href="../html/Login.html">Login</a>
+                    <a href="../html/my profile.html">My Profile</a>
+                    <a href="#">My Orders</a>
+                    <a href="#">Cart</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">My Service Requests</a>
+                </div>
+            </div>
+            <!-- Cart Icon -->
+            <div class="playground-1-2">
+                <button class="btn-1 btn-1-3-4" id="add-to-cart-btn" onclick="toggleCart()">
+                    <i class="ph ph-shopping-cart" id="add-to-cart-btn" onclick="toggleCart()"></i>
+                </button>
+
+        </div>
+    </div>
+</section>
+
+<!-- Cart Sidebar -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <span class="close-cart" onclick="closeCart()">&times;</span>
+    </div>
+    <div class="cart-content" id="cart-content">
+        <!-- Cart items will be dynamically added here -->
+    </div>
+    <div class="cart-footer">
+        <p class="t-i">Total Items: <span id="total-items">0</span></p>
+        <p class="t-a">Total Amount: ₹<span id="total-amount">0</span></p>
+        <button class="btn-proceed" onclick="proceedToCheckout()">Proceed to Buy</button>
+    </div>
+</div>
+
+<!-- latest Macbook For You -->
+<section>
+    <div class="ltest-laptop-for-you">
+        <div class="ltest-laptop-for-you-text">
+            <p>Latest Laptop For You</p>
+        </div>
+        <div class="ltest-laptop-for-you-image">
+            <div class="ltest-laptop-for-you-img-1">
+                <img src="../Img/Laptops/LatestLaptop/MacBookAir.webp">
+            </div>
+            <div class="ltest-laptop-for-you-img-1">
+                <img src="../Img/Laptops/LatestLaptop/SamsungGalaxyBook4Pro.webp">
+            </div>
+        </div>
+    </div>
+
+    <div class="four-image">
+        <div class="four-image-1">
+            <img src="../Img/Laptops/LatestLaptop/AcerAMDRyzen7.webp">
+        </div>
+        <div class="four-image-1">
+            <img src="../Img/Laptops/LatestLaptop/HP12thGen.webp">
+        </div>
+        <div class="four-image-1">
+            <img src="../Img/Laptops/LatestLaptop/LenovoIdeaPadSlim5.webp">
+        </div>
+        <div class="four-image-1">
+            <img src="../Img/Laptops/LatestLaptop/HPVictus12Gen.webp">  
+        </div>
+    </div>
+</section>
+<!-- Macbook -->
+<section>
+    <section>
+        <div class="all-product">
+            <div class="all-product-holding">
+                <p class="all-product-text">Macbook</p>
+            </div>
+            <div class="all-product-cart">
+                <!-- 1 -->
+                <div class="all-cat-1">
+                    <div class="all-cart-1-image">
+                        <img src="../Img/Laptops/MacBooks/MacBookAirLaptopM1chip.png" onclick="window.location.href = 'macbookairm1chip.html';">
+                    </div>
+                    <div class="all-cart-1-text">
+                        <div class="all-cart-1-text-icon">
+                            <i class="ph ph-shopping-cart all-cart-1-icon" id="add-to-cart-btn"></i>
+                        </div>
+                        <div class="all-cart-1-text-name">
+                            <p class="all-cart-1-text-name-phone">Macbook Air Laptop M1 Chip</p>
+                            <p class="a-c-1-t-n-1">₹79,999</p>
+                        </div>
+                    </div>
+                </div>
+            <!-- 2 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Laptops/MacBooks/MacBookAir13inchLaptopwithM3chip.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon" id="add-to-cart-btn"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">2024 MacBook Air 13" Laptop with M3 Chip</p>
+                        <p class="a-c-1-t-n-1">₹1,14,999</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Laptops/MacBooks/Apple2023MacBookPro16inchM3Maxchip.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">2023 MacBook Pro (16-inch, M3 Max Chip)</p>
+                        <p class="a-c-1-t-n-1">₹3,99,999</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Laptops/MacBooks/Apple2022MacBookAirLaptopwithM2chip.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">2022 MacBook Air Laptop with M2 chip</p>
+                        <p class="a-c-1-t-n-1">₹99,999</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Laptops/MacBooks/Apple2023MacBookAir15inchM2chip.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">2023 MacBook Pro (15-inch, M3 chip)</p>
+                        <p class="a-c-1-t-n-1">₹1,15,999</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Laptops/MacBooks/Apple2023MacBookPro14inchM3chip.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">2023 Macbook Pro (14-inch, M3 Chip)</p>
+                        <p class="a-c-1-t-n-1">₹1,89,999</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 7 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Laptops/MacBooks/Apple2024MacBookAir15inchLaptopwithM3chip.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">2024 MacBook Air 15 inch Laptop with M3 chip</p>
+                        <p class="a-c-1-t-n-1">₹1,34,699</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 8 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Laptops/MacBooks/Apple2023MacBookPro16inchM3Maxchip.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">2023 MacBook Pro (16-inch, M3 Max Chip)</p>
+                        <p class="a-c-1-t-n-1">₹2,89,999</p>
+                    </div>
+                </div>
+            </div>
+
+
+           </div>
+        </div>
+    </section>   
+    <section>
+<!-- windows Laptop -->
+<section>
+    <div class="all-product-2">
+        <div class="all-product-holding">
+            <p class="all-product-text-2">Windows Laptop</p>
+        </div>
+        <div class="all-product-cart-2">
+            <!-- 1 -->
+            <div class="all-cat-2-1">
+                <div class="all-cart-1-image-2">
+                    <img src="../Img/Laptops/Window/Dell15.png" onclick="window.location.href = 'macbookairm1chip.html';">
+                </div>
+                <div class="all-cart-1-text-2">
+                    <div class="all-cart-1-text-icon-2">
+                        <i class="ph ph-shopping-cart all-cart-1-icon-2" id="add-to-cart-btn"></i>
+                    </div>
+                    <div class="all-cart-1-text-name-2">
+                        <p class="all-cart-1-text-name-phone-2">Dell 15 laptop, Itel Core i5-1135G7 Processor</p>
+                        <p class="a-c-1-t-n-1-2">₹49,990</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 2 -->
+            <div class="all-cat-2-1">
+                <div class="all-cart-1-image-2">
+                    <img src="../Img/Laptops/Window/LenovoIdeaPadSlim3.png">
+                </div>
+                <div class="all-cart-1-text-2">
+                    <div class="all-cart-1-text-icon-2">
+                        <i class="ph ph-shopping-cart all-cart-1-icon-2" id="add-to-cart-btn"></i>
+                    </div>
+                    <div class="all-cart-1-text-name-2">
+                        <p class="all-cart-1-text-name-phone-2">Lenovo IdeaPad Slim 3 Intel Core i7 11th Gen 15.6"</p>
+                        <p class="a-c-1-t-n-1-2">₹62,999</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="all-cat-2-1">
+                <div class="all-cart-1-image-2">
+                    <img src="../Img/Laptops/Window/ASUSVivobook14.png">
+                </div>
+                <div class="all-cart-1-text-2">
+                    <div class="all-cart-1-text-icon-2">
+                        <i class="ph ph-shopping-cart all-cart-1-icon-2"></i>
+                    </div>
+                    <div class="all-cart-1-text-name-2">
+                        <p class="all-cart-1-text-name-phone-2">ASUS Vivobook 14, Intel Core i3-1115G4 11th Gen, 14"</p>
+                        <p class="a-c-1-t-n-1-2">₹31,499</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="all-cat-2-1">
+                <div class="all-cart-1-image-2">
+                    <img src="../Img/Laptops/Window/ASUSVivobook15.png">
+                </div>
+                <div class="all-cart-1-text-2">
+                    <div class="all-cart-1-text-icon-2">
+                        <i class="ph ph-shopping-cart all-cart-1-icon-2"></i>
+                    </div>
+                    <div class="all-cart-1-text-name-2">
+                        <p class="all-cart-1-text-name-phone-2">ASUS Vivobook 15, Intel Core i7-12650H 12th Gen, 15.6"</p>
+                        <p class="a-c-1-t-n-1-2">₹61,990</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="all-cat-2-1">
+                <div class="all-cart-1-image-2">
+                    <img src="../Img/Laptops/Window/LenovoThinkBook15.png">
+                </div>
+                <div class="all-cart-1-text-2">
+                    <div class="all-cart-1-text-icon-2">
+                        <i class="ph ph-shopping-cart all-cart-1-icon-2"></i>
+                    </div>
+                    <div class="all-cart-1-text-name-2">
+                        <p class="all-cart-1-text-name-phone-2">Lenovo ThinkBook 15 G5 Ryzen 5 15.6"</p>
+                        <p class="a-c-1-t-n-1-2">₹38,990</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="all-cat-2-1">
+                <div class="all-cart-1-image-2">
+                    <img src="../Img/Laptops/Window/AcerAspireLite12Gen.png">
+                </div>
+                <div class="all-cart-1-text-2">
+                    <div class="all-cart-1-text-icon-2">
+                        <i class="ph ph-shopping-cart all-cart-1-icon-2"></i>
+                    </div>
+                    <div class="all-cart-1-text-name-2">
+                        <p class="all-cart-1-text-name-phone-2">Acer Aspire Lite 12th Gen Intel Core i3-1215U Premium Metal Laptop </p>
+                        <p class="a-c-1-t-n-1-2">₹31,999</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 7 -->
+            <div class="all-cat-2-1">
+                <div class="all-cart-1-image-2">
+                    <img src="../Img/Laptops/Window/MicrosoftNewSurfaceLaptop5.png">
+                </div>
+                <div class="all-cart-1-text-2">
+                    <div class="all-cart-1-text-icon-2">
+                        <i class="ph ph-shopping-cart all-cart-1-icon-2"></i>
+                    </div>
+                    <div class="all-cart-1-text-name-2">
+                        <p class="all-cart-1-text-name-phone-2">Microsoft New Surface Laptop5 13.5" Intel evo 12 Gen i5</p>
+                        <p class="a-c-1-t-n-1-2">₹99,556</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 8 -->
+            <div class="all-cat-2-1">
+                <div class="all-cart-1-image-2">
+                    <img src="../Img/Laptops/Window/LenovoThinkPadE14.png">
+                </div>
+                <div class="all-cart-1-text-2">
+                    <div class="all-cart-1-text-icon-2">
+                        <i class="ph ph-shopping-cart all-cart-1-icon-2"></i>
+                    </div>
+                    <div class="all-cart-1-text-name-2">
+                        <p class="all-cart-1-text-name-phone-2">Lenovo ThinkPad E14 Intel Core i5 13th Gen 14"</p>
+                        <p class="a-c-1-t-n-1-2">₹70,490</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 9 -->
+            <div class="all-cat-2-1">
+                <div class="all-cart-1-image-2">
+                    <img src="../Img/Laptops/Window/LenovoIdeaPad311thGen.png">
+                </div>
+                <div class="all-cart-1-text-2">
+                    <div class="all-cart-1-text-icon-2">
+                        <i class="ph ph-shopping-cart all-cart-1-icon-2"></i>
+                    </div>
+                    <div class="all-cart-1-text-name-2">
+                        <p class="all-cart-1-text-name-phone-2">Lenovo IdeaPad 3 11th Gen Intel Core i3 15.6" </p>
+                        <p class="a-c-1-t-n-1-2">₹33,990</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 10 -->
+            <div class="all-cat-2-1">
+                <div class="all-cart-1-image-2">
+                    <img src="../Img/Laptops/Window/HP15s.png">
+                </div>
+                <div class="all-cart-1-text-2">
+                    <div class="all-cart-1-text-icon-2">
+                        <i class="ph ph-shopping-cart all-cart-1-icon-2"></i>
+                    </div>
+                    <div class="all-cart-1-text-name-2">
+                        <p class="all-cart-1-text-name-phone-2">HP Laptop 15s, AMD Ryzen 3 5300U, 15.6-inch</p>
+                        <p class="a-c-1-t-n-1-2">₹31,990</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 11 -->
+            <div class="all-cat-2-1">
+                <div class="all-cart-1-image-2">
+                    <img src="../Img/Laptops/Window/HONORMagicBookX16.png">
+                </div>
+                <div class="all-cart-1-text-2">
+                    <div class="all-cart-1-text-icon-2">
+                        <i class="ph ph-shopping-cart all-cart-1-icon-2"></i>
+                    </div>
+                    <div class="all-cart-1-text-name-2">
+                        <p class="all-cart-1-text-name-phone-2">HONOR MagicBook X16 Pro 2024, 13th Gen Intel Core i5-13420H </p>
+                        <p class="a-c-1-t-n-1-2">₹55,990</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 12 -->
+            <div class="all-cat-2-1">
+                <div class="all-cart-1-image-2">
+                    <img src="../Img/Laptops/Window/HP14s.png">
+                </div>
+                <div class="all-cart-1-text-2">
+                    <div class="all-cart-1-text-icon-2">
+                        <i class="ph ph-shopping-cart all-cart-1-icon-2"></i>
+                    </div>
+                    <div class="all-cart-1-text-name-2">
+                        <p class="all-cart-1-text-name-phone-2">HP Laptop 14s, Intel Pentium Silver N6000, 14 inch</p>
+                        <p class="a-c-1-t-n-1-2">₹26,490</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 13 -->
+            <div class="all-cat-2-1">
+                <div class="all-cart-1-image-2">
+                    <img src="../Img/Laptops/Window/ASUSROGStrixG17.png">
+                </div>
+                <div class="all-cart-1-text-2">
+                    <div class="all-cart-1-text-icon-2">
+                        <i class="ph ph-shopping-cart all-cart-1-icon-2"></i>
+                    </div>
+                    <div class="all-cart-1-text-name-2">
+                        <p class="all-cart-1-text-name-phone-2">ASUS ROG Strix G17 (2022) Gaming Laptop,AMD Ryzen 7-6800HS,17.3-inch</p>
+                        <p class="a-c-1-t-n-1-2">₹79,990</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="view-more-btn">View More</button>
+    </div>
+</section>
+<!-- footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Office Location</h3>
+            <p>500 Terry Francois Street<br>San Francisco, CA 94158</p>
+            <p>info@mysite.com</p>
+            <p>123-456-7890</p>
+        </div>
+        <div class="footer-section">
+            <h3>Shop</h3>
+            <p onclick="window.location.href = 'index.html';">Shop All</p>
+            <p onclick="window.location.href = 'mobile.html';">Mobile</p>
+            <p onclick="window.location.href = 'tablet.html';">Tablets</p>
+            <p onclick="window.location.href = 'headphone.html';">Audio</p>
+            <p  onclick="window.location.href = 'laptop.html';">Laptop</p>
+            <p onclick="window.location.href = 'smartwatch.html';">SmartWatch</p>
+            <p>Accessories</p>
+        </div>
+        <div class="footer-section">
+            <h3>Customer Support</h3>
+            <p>Contact Us</p>
+            <p>Help Center</p>
+            <p>About Us</p>
+        </div>
+        <div class="footer-section">
+            <h3>Policy</h3>
+            <p>Shipping & Returns</p>
+            <p>Terms & Conditions</p>
+            <p>Payment Methods</p>
+            <p>FAQ</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="../JavaScript/nav.js"></script>
+<script src="../JavaScript/laptop.js"></script>
+ <!-- online Icon Link -->
+ <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</body>
+</html>

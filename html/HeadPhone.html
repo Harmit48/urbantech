@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+       <!-- favbicon -->
+       <link rel="icon" type="image/x-icon" href="../Img/HomeImage/favicon.png">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="stylesheet" href="../css/headphone.css">
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+   
+    <!-- page title -->
+    <title>Head Phone</title>
+</head>
+<body>
+<!-- Navbar -->
+<section>
+    <div class="nav-1">
+        <div class="navbar-left">
+            <div class="logo" onclick="window.location.href = 'index.html';">URBANTECH</div>
+        </div>
+        <div class="navbar-right">
+            <div class="searchBox">
+                <input class="searchInput" type="text" name="" placeholder="Search">
+                <button class="searchButton" href="#"><i class="ph-bold ph-magnifying-glass"></i></button>
+            </div>
+            <!-- Shop button -->
+            <div class="playground">
+                <button class="btn btn-1-3-4" id="shop-button">
+                    <i class="ph ph-tote"></i>
+                    <span class="shop-con cart-icon">Shop</span>
+                </button>
+                <div class="dropdown-content" id="dropdown-content">
+                    <a href="#">All Product</a>
+                    <a href="../html/mobile.html">Mobile</a>
+                    <a href="../html/laptop.html">Laptop</a>
+                    <a href="../html/tablet.html">Tablets & iPads</a>
+                    <a href="../html/HeadPhone.html">Audio Product</a>
+                    <a href="../html/smartwatch.html">SmartWatches</a>
+                    <a href="#">Accessories</a>
+                </div>
+            </div>
+            <!-- Profile Button -->
+            <div class="playground-1">
+                <button class="btn-1 btn-1-3-4" id="profile-button">
+                    <i class="ph-bold ph-user cart-icon-1"></i>
+                    <span class="shop-con-1">Profile</span>
+                </button>
+                <div class="dropdown-content-1" id="dropdown-content-1">
+                    <a href="../html/Login.html">Login</a>
+                    <a href="../html/my profile.html">My Profile</a>
+                    <a href="#">My Orders</a>
+                    <a href="#">Cart</a>
+                    <a href="#">Contact Us</a>
+                    <a href="#">My Service Requests</a>
+                </div>
+            </div>
+            <!-- Cart Icon -->
+            <div class="playground-1-2">
+                <button class="btn-1 btn-1-3-4" id="add-to-cart-btn" onclick="toggleCart()">
+                    <i class="ph ph-shopping-cart" id="add-to-cart-btn" onclick="toggleCart()"></i>
+                </button>
+
+        </div>
+    </div>
+</section>
+
+<!-- Cart Sidebar -->
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <span class="close-cart" onclick="closeCart()">&times;</span>
+    </div>
+    <div class="cart-content" id="cart-content">
+        <!-- Cart items will be dynamically added here -->
+    </div>
+    <div class="cart-footer">
+        <p class="t-i">Total Items: <span id="total-items">0</span></p>
+        <p class="t-a">Total Amount: ₹<span id="total-amount">0</span></p>
+        <button class="btn-proceed" onclick="proceedToCheckout()">Proceed to Buy</button>
+    </div>
+</div>
+
+
+<!-- latest Macbook For You -->
+<section>
+    <div class="ltest-laptop-for-you">
+        <div class="ltest-laptop-for-you-text">
+            <p>Latest HeadPhone For You</p>
+        </div>
+        <div class="ltest-laptop-for-you-image">
+            <div class="ltest-laptop-for-you-img-1">
+                <img src="../Img/Headphones/LatestHeadphone/3 Neo Neckbands.webp">
+            </div>
+            <div class="ltest-laptop-for-you-img-1">
+                <img src="../Img/Headphones/LatestHeadphone/ie 771.webp">
+            </div>
+        </div>
+    </div>
+
+    <div class="four-image">
+        <div class="four-image-1">
+            <img src="../Img/Headphones/LatestHeadphone/boat rockerz 255.webp">
+        </div>
+        <div class="four-image-1">
+            <img src="../Img/Headphones/LatestHeadphone/Nothing ear a.webp">
+        </div>
+        <div class="four-image-1">
+            <img src="../Img/Headphones/LatestHeadphone/nothing neckband.webp">
+        </div>
+        <div class="four-image-1">
+            <img src="../Img/Headphones/LatestHeadphone/realme t110.webp">
+        </div>
+    </div>
+</section>
+
+
+    <!-- HeadPhone -->
+<section>
+    <section>
+        <div class="all-product">
+            <div class="all-product-holding">
+                <p class="all-product-text">HeadPhone</p>
+            </div>
+            <div class="all-product-cart">
+                <!-- 1 -->
+                <div class="all-cat-1">
+                    <div class="all-cart-1-image">
+                        <img src="../Img/Headphones/HeadphonesImg/boAtRockerz450R.png" onclick="window.location.href = 'macbookairm1chip.html';">
+                    </div>
+                    <div class="all-cart-1-text">
+                        <div class="all-cart-1-text-icon">
+                            <i class="ph ph-shopping-cart all-cart-1-icon" id="add-to-cart-btn"></i>
+                        </div>
+                        <div class="all-cart-1-text-name">
+                            <p class="all-cart-1-text-name-phone">boAt Rockerz 450 Bluetooth On Ear Headphones with Mic</p>
+                            <p class="a-c-1-t-n-1">₹1,699</p>
+                        </div>
+                    </div>
+                </div>
+            <!-- 2 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/HeadphonesImg/boAtRockerz550.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon" id="add-to-cart-btn"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">boAt Rockerz 550 Bluetooth Wireless Over Ear Headphones</p>
+                        <p class="a-c-1-t-n-1">₹1,899</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/HeadphonesImg/JBLTune510BT.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">JBL Tune 510BT</p>
+                        <p class="a-c-1-t-n-1">₹2,799</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/HeadphonesImg/JBLTune770NC.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">JBL Tune 770NC Wireless Over Ear ANC Headphones</p>
+                        <p class="a-c-1-t-n-1">₹5,999</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/HeadphonesImg/MarshallMajorIV.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">Marshall Major IV Wireless On-Ear Headphones</p>
+                        <p class="a-c-1-t-n-1">₹10,999</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/HeadphonesImg/NoiseNewlyLaunched.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">Noise Newly Launched Three Wireless On-Ear Headphones </p>
+                        <p class="a-c-1-t-n-1">₹1,999</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 7 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/HeadphonesImg/NoiseTwo.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">Noise Two Wireless On-Ear Headphones</p>
+                        <p class="a-c-1-t-n-1">₹1,699</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 8 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/HeadphonesImg/SonyWHCH720N.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">Sony WH-CH720N, Wireless Over-Ear Active Noise</p>
+                        <p class="a-c-1-t-n-1">₹8,990</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 9 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/HeadphonesImg/ZEBRONICSThunder.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">ZEBRONICS Thunder Bluetooth</p>
+                        <p class="a-c-1-t-n-1">₹799</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 10 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/HeadphonesImg/ZebronicsZebBangPro.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">ZEBRONICS Zeb-Bang Pro Bluetooth</p>
+                        <p class="a-c-1-t-n-1">₹699</p>
+                    </div>
+                </div>
+            </div>
+
+
+           </div>
+        </div>
+    </section>   
+
+
+    <!-- Neckband -->
+<section>
+    <section>
+        <div class="all-product">
+            <div class="all-product-holding">
+                <p class="all-product-text">Neckband</p>
+            </div>
+            <div class="all-product-cart">
+                <!-- 1 -->
+                <div class="all-cat-1">
+                    <div class="all-cart-1-image">
+                        <img src="../Img/Headphones/Neckband/boAtRockerz245V2Pro.png" onclick="window.location.href = 'macbookairm1chip.html';">
+                    </div>
+                    <div class="all-cart-1-text">
+                        <div class="all-cart-1-text-icon">
+                            <i class="ph ph-shopping-cart all-cart-1-icon" id="add-to-cart-btn"></i>
+                        </div>
+                        <div class="all-cart-1-text-name">
+                            <p class="all-cart-1-text-name-phone">boAt Rockerz 245 V2 Pro Wireless in Ear Neckband</p>
+                            <p class="a-c-1-t-n-1">₹1,099</p>
+                        </div>
+                    </div>
+                </div>
+            <!-- 2 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/Neckband/boAtRockerz255ProPlus.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon" id="add-to-cart-btn"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">boAt Rockerz 255 Pro+ Bluetooth in Ear Neckband</p>
+                        <p class="a-c-1-t-n-1">₹1,099</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/Neckband/boAtRockerz330Pro.png ">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">boAt Rockerz 330 Pro</p>
+                        <p class="a-c-1-t-n-1">₹1,799</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/Neckband/LavaProbudsN31.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">Probuds N31 BT in-Ear Neckband</p>
+                        <p class="a-c-1-t-n-1">₹1,099</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/Neckband/OneplusBulletsZ2.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">Oneplus Bullets Z2 Bluetooth Wireless in Ear Earphones</p>
+                        <p class="a-c-1-t-n-1">₹1,799</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/Neckband/pTronNewlyLaunchedTangentEon.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">pTron Newly Launched Tangent Eon BT v5.3 Wireless in-Ear Neckband</p>
+                        <p class="a-c-1-t-n-1">₹698</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 7 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/Neckband/RealmeBudsWireless3.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">Realme Buds Wireless 3 in-Ear Bluetooth Headphones</p>
+                        <p class="a-c-1-t-n-1">₹1,699</p>
+                    </div>
+                </div>
+            </div>
+            
+
+           </div>
+        </div>
+    </section>   
+
+
+        <!-- TWS -->
+<section>
+    <section>
+        <div class="all-product">
+            <div class="all-product-holding">
+                <p class="all-product-text">TWS</p>
+            </div>
+            <div class="all-product-cart">
+                <!-- 1 -->
+                <div class="all-cat-1">
+                    <div class="all-cart-1-image">
+                        <img src="../Img/Headphones/TWS/boAtAirdopes141.png" onclick="window.location.href = 'macbookairm1chip.html';">
+                    </div>
+                    <div class="all-cart-1-text">
+                        <div class="all-cart-1-text-icon">
+                            <i class="ph ph-shopping-cart all-cart-1-icon" id="add-to-cart-btn"></i>
+                        </div>
+                        <div class="all-cart-1-text-name">
+                            <p class="all-cart-1-text-name-phone">boAt Airdopes 141 Bluetooth TWS </p>
+                            <p class="a-c-1-t-n-1">₹1,299</p>
+                        </div>
+                    </div>
+                </div>
+            <!-- 2 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/TWS/boAtAirdopes200Plus.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon" id="add-to-cart-btn"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">boAt Airdopes 200 Plus in Ear TWS Earbuds</p>
+                        <p class="a-c-1-t-n-1">₹1,599</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/TWS/boAtNirvanaIon.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">boAt Nirvana Ion TWS Earbuds</p>
+                        <p class="a-c-1-t-n-1">₹1,599</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 4 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/TWS/JBL.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">JBL WAVE FLEX Wireless Earbuds (TWS)</p>
+                        <p class="a-c-1-t-n-1">₹3,499</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 5 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/TWS/JBLTune235NC.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">JBL Tune 235NC in Ear Wireless ANC Earbuds (TWS</p>
+                        <p class="a-c-1-t-n-1">₹3,799</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 6 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/TWS/onePlusBuds3.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">OnePlus Buds 3 in Ear TWS Bluetooth Earbuds</p>
+                        <p class="a-c-1-t-n-1">₹5,499</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 7 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/TWS/OnePlusBudsPro2.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">OnePlus Buds Pro 2 Bluetooth TWS</p>
+                        <p class="a-c-1-t-n-1">₹8,345</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 8 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/TWS/OnePlusNordBuds2.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">OnePlus Nord Buds 2 TWS in Ear Earbuds</p>
+                        <p class="a-c-1-t-n-1">₹2,999</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 9 -->
+            <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/TWS/realmeBudsT300TWS.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">realme Buds T300 TWS Earbuds</p>
+                        <p class="a-c-1-t-n-1">₹2,199</p>
+                    </div>
+                </div>
+            </div>
+             <!-- 10 -->
+             <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/TWS/RedmiBuds5.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">Redmi Buds 5 Bluetooth TWS Earbuds</p>
+                        <p class="a-c-1-t-n-1">₹2,699</p>
+                    </div>
+                </div>
+            </div>
+             <!-- 11 -->
+             <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/TWS/SAMSUNGGalaxyBuds2.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">Samsung Galaxy Buds 2 </p>
+                        <p class="a-c-1-t-n-1">₹7,898</p>
+                    </div>
+                </div>
+            </div>
+              <!-- 12 -->
+              <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/TWS/SamsungGalaxyWirelessBudsFE.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">Samsung Galaxy Wireless Buds FE</p>
+                        <p class="a-c-1-t-n-1">₹6,499</p>
+                    </div>
+                </div>
+            </div>
+              <!-- 13 -->
+              <div class="all-cat-1">
+                <div class="all-cart-1-image">
+                    <img src="../Img/Headphones/TWS/ZEBRONICSZeb-SoundBomb1.png">
+                </div>
+                <div class="all-cart-1-text">
+                    <div class="all-cart-1-text-icon">
+                        <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                    </div>
+                    <div class="all-cart-1-text-name">
+                        <p class="all-cart-1-text-name-phone">ZEBRONICS Zeb-Sound Bomb 1</p>
+                        <p class="a-c-1-t-n-1">₹649</p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+           </div>
+        </div>
+    </section>   
+<!-- footer -->
+<footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Office Location</h3>
+            <p>500 Terry Francois Street<br>San Francisco, CA 94158</p>
+            <p>info@mysite.com</p>
+            <p>123-456-7890</p>
+        </div>
+        <div class="footer-section">
+            <h3>Shop</h3>
+            <p onclick="window.location.href = 'index.html';">Shop All</p>
+            <p onclick="window.location.href = 'mobile.html';">Mobile</p>
+            <p onclick="window.location.href = 'tablet.html';">Tablets</p>
+            <p onclick="window.location.href = 'headphone.html';">Audio</p>
+            <p onclick="window.location.href = 'laptop.html';">Laptop</p>
+            <p onclick="window.location.href = 'smartwatch.html';">SmartWatch</p>
+            <p>Accessories</p>
+        </div>
+        <div class="footer-section">
+            <h3>Customer Support</h3>
+            <p>Contact Us</p>
+            <p>Help Center</p>
+            <p>About Us</p>
+        </div>
+        <div class="footer-section">
+            <h3>Policy</h3>
+            <p>Shipping & Returns</p>
+            <p>Terms & Conditions</p>
+            <p>Payment Methods</p>
+            <p>FAQ</p>
+        </div>
+    </div>
+</footer>
+
+
+<script src="../JavaScript/nav.js"></script>
+<script src="../JavaScript/laptop.js"></script>
+ <!-- online Icon Link -->
+ <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+</body>
+</html>
