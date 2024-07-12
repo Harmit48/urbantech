@@ -1,36 +1,4 @@
-// Toggle the dropdown menu visibility when clicking the "Shop" button
-document.getElementById("shop-button").addEventListener("click", function(event) {
-    event.stopPropagation();
-    var dropdown = document.getElementById("dropdown-content");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-});
-
-// Hide the dropdown menu when clicking outside of it
-document.addEventListener("click", function(event) {
-    var dropdown = document.getElementById("dropdown-content");
-    if (event.target !== dropdown && event.target.closest(".playground") === null) {
-        dropdown.style.display = "none";
-    }
-});
-
-// Toggle the dropdown menu visibility when clicking the "Shop" button
-document.getElementById("profile-button").addEventListener("click", function(event) {
-    event.stopPropagation();
-    var dropdown = document.getElementById("dropdown-content-1");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-});
-
-// Hide the dropdown menu when clicking outside of it
-document.addEventListener("click", function(event) {
-    var dropdown = document.getElementById("dropdown-content-1");
-    if (event.target !== dropdown && event.target.closest(".playground-1") === null) {
-        dropdown.style.display = "none";
-    }
-});
-
-
-// cart slider
-
+// Cart slider functionality
 let cart = [];
 const cartSidebar = document.getElementById('cart-sidebar');
 const cartContent = document.getElementById('cart-content');
@@ -76,8 +44,7 @@ function addToCart(product) {
     } else {
         cart.push(product);
     }
-
-    // updateCart();
+    updateCart();
     openCart();
 }
 
@@ -131,7 +98,11 @@ function changeQuantity(productName, change) {
 
 // Proceed to checkout function
 function proceedToCheckout() {
-    alert('Proceeding to checkout with total amount: ₹' + totalAmount.innerText);
+    // Save cart data to localStorage
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Redirect to the order page
+    window.location.href = 'myorder.html'; // Replace with the actual path to your order page
 }
 
 // Handle cart button click to toggle cart sidebar
@@ -151,4 +122,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Dropdown menu functionality
+document.getElementById("shop-button").addEventListener("click", function(event) {
+    event.stopPropagation();
+    var dropdown = document.getElementById("dropdown-content");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+});
 
+document.addEventListener("click", function(event) {
+    var dropdown = document.getElementById("dropdown-content");
+    if (event.target !== dropdown && event.target.closest(".playground") === null) {
+        dropdown.style.display = "none";
+    }
+});
+
+document.getElementById("profile-button").addEventListener("click", function(event) {
+    event.stopPropagation();
+    var dropdown = document.getElementById("dropdown-content-1");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+});
+
+document.addEventListener("click", function(event) {
+    var dropdown = document.getElementById("dropdown-content-1");
+    if (event.target !== dropdown && event.target.closest(".playground-1") === null) {
+        dropdown.style.display = "none";
+    }
+});
+
+
+
+// Proceed to checkout function
+function proceedToCheckout() {
+    // Save cart data to sessionStorage
+    sessionStorage.setItem('cart', JSON.stringify(cart));
+    // Redirect to the order page
+    window.location.href = 'myorder.html'; // Replace with the actual path to your order page
+}
