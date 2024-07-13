@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Retrieve cart data from sessionStorage
-    const storedCart = sessionStorage.getItem('cart');
+    // Retrieve cart data from localStorage
+    const storedCart = localStorage.getItem('cart');
     if (storedCart) {
         const cart = JSON.parse(storedCart);
         displayOrderSummary(cart);
-        // Optionally clear cart data from sessionStorage
-        sessionStorage.removeItem('cart');
     }
 
     // Handle form submission for placing orders
@@ -37,6 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('orderForm').reset();
         showOrderConfirmation(trackId);
 
+        // Clear the cart from localStorage
+        localStorage.removeItem('cart');
+
         // Refresh previous orders list
         displayPreviousOrders();
     });
@@ -46,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const paymentMethod = this.value;
         const paymentDetails = document.getElementById('paymentDetails');
         paymentDetails.innerHTML = '';
-        
+
         if (paymentMethod === 'creditCard' || paymentMethod === 'debitCard') {
             paymentDetails.innerHTML = `
                 <div class="form-group">
@@ -115,6 +116,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Display previous orders on page load
     displayPreviousOrders();
+
+    // Handle page navigation
+    window.addEventListener('beforeunload', function() {
+        sessionStorage.setItem('cart', localStorage.getItem('cart'));
+    });
+
+    // Clear the cart if coming from the home page
+    if (document.referrer.includes('homepage.html')) {
+        localStorage.removeItem('cart');
+    }
 });
 
 function displayOrderSummary(cart) {
@@ -141,9 +152,7 @@ function createOrderItemElement(item) {
         <div class="order-item-details">
             <p>${item.name}</p>
             <p>₹${item.price}</p>
-            <div class="quantity-controls">
-             
-            </div>
+            <p>Quantity: ${item.quantity}</p>
         </div>
     `;
     return orderItem;
@@ -162,24 +171,6 @@ function saveOrderDetails(orderDetails) {
     let orders = JSON.parse(localStorage.getItem('orders')) || [];
     orders.push(orderDetails);
     localStorage.setItem('orders', JSON.stringify(orders));
-
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    orderDetails.cart.forEach(newItem => {
-        let found = false;
-        for (let i = 0; i < cart.length; i++) {
-            if (cart[i].id === newItem.id) {
-                cart[i].quantity += newItem.quantity;
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            cart.push(newItem);
-        }
-    });
-
-    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 function displayOrderDetails(trackId) {
@@ -223,11 +214,10 @@ function displayPreviousOrders() {
         orderBox.classList.add('order-box');
         orderBox.innerHTML = `
             <div>
-               <button class="remove-order" onclick="removeOrder('${order.trackId}')">Remove</button>
-                <p>Tracking ID: ${order.trackId}</p>    
+                <!-- <button class="remove-order" onclick="removeOrder('${order.trackId}')">Remove</button> -->
+                <p>Tracking ID: ${order.trackId}</p>
                 <p>Name: ${order.name}</p>
                 <p>Total Amount: ₹${calculateTotal(order.cart)}</p>
-                
             </div>
         `;
 
@@ -252,13 +242,6 @@ function calculateTotal(cart) {
         total += item.price * item.quantity;
     });
     return total.toFixed(2);
-}
-
-function removeOrder(trackId) {
-    let orders = JSON.parse(localStorage.getItem('orders')) || [];
-    orders = orders.filter(order => order.trackId !== trackId);
-    localStorage.setItem('orders', JSON.stringify(orders));
-    displayPreviousOrders();
 }
 
 function changeQuantity(itemId, change) {
