@@ -26,8 +26,8 @@
     <title>Smart Watch</title>
 </head>
 <body>
-<!-- Navbar -->
-<section>
+  <!-- Navbar -->
+  <section>
     <div class="nav-1">
         <div class="navbar-left">
             <div class="logo" onclick="window.location.href = 'index.html';">URBANTECH</div>
@@ -67,22 +67,22 @@
                     <a href="#">Contact Us</a>
                     <a href="../html/servicerequestform.html">My Service Requests</a>
                 </div>
-            </div>
-            <!-- Cart Icon -->
-            <div class="playground-1-2">
-                <button class="btn-1 btn-1-3-4" id="add-to-cart-btn" onclick="toggleCart()">
-                    <i class="ph ph-shopping-cart" id="add-to-cart-btn" onclick="toggleCart()"></i>
+        </div>
+              <!-- Cart Icon -->
+              <div class="cart-icon-container">
+                <button class="btn-1 btn-1-3-4" id="cart-button">
+                    <i class="ph-bold ph-shopping-cart"></i>
                 </button>
-
+            </div>
         </div>
     </div>
-</section>
-
-<!-- Cart Sidebar -->
-<div id="cart-sidebar" class="cart-sidebar">
+ </section>
+ 
+ <!-- Cart Sidebar -->
+ <div id="cart-sidebar" class="cart-sidebar">
     <div class="cart-header">
         <h2>Shopping Cart</h2>
-        <span class="close-cart" onclick="closeCart()">&times;</span>
+        <span class="close-cart" onclick="closeCartone()">&times;</span>
     </div>
     <div class="cart-content" id="cart-content">
         <!-- Cart items will be dynamically added here -->
@@ -92,7 +92,10 @@
         <p class="t-a">Total Amount: ₹<span id="total-amount">0</span></p>
         <button class="btn-proceed" onclick="proceedToCheckout()">Proceed to Buy</button>
     </div>
-</div>
+ </div>
+        </div>
+    </div>
+ </section>
 
 <!-- latest Macbook For You -->
 <section>

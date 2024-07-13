@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="../css/myorder.css">
 </head>
 <body>
+
+    <button class="button" onclick="window.location.href = 'index.html';">
+		<span class="button-content"><i class="ph ph-arrow-left"></i></span>
+	  </button>	
+
+
     <div class="container">
         <h1>Order Page</h1>
 
@@ -66,8 +72,10 @@
         <button id="newOrderButton" style="display: none;">New Order</button>
 
         <div id="previousOrders">
+           
             <h2>Previous Orders</h2>
             <!-- Previous orders will be dynamically added here -->
+            
         </div>
     </div>
 
@@ -88,14 +96,15 @@
     </div>
 
     <!-- Order Confirmation -->
-    <div id="orderConfirmation" class="order-confirmation">
-        <div>
-            <p>Pre-order placed successfully!</p>
-            <p>Your tracking ID is <strong id="confirmationTrackId"></strong>.</p>
+    <div id="orderConfirmation" class="modal" style="display: none;">
+        <div class="modal-content">
+            <p>Order placed successfully! Your tracking ID is <span id="confirmationTrackId"></span>.</p>
             <button onclick="hideOrderConfirmation()">OK</button>
         </div>
     </div>
+    
 
     <script src="../JavaScript/myorder.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </body>
 </html>

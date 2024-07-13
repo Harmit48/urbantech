@@ -122,22 +122,31 @@ function displayOrderSummary(cart) {
     const totalPriceElement = document.getElementById('totalPrice');
     let total = 0;
 
+    orderItemsContainer.innerHTML = ''; // Clear existing items
+
     cart.forEach(item => {
-        const orderItem = document.createElement('div');
-        orderItem.classList.add('order-item');
-        orderItem.innerHTML = `
-            <img src="${item.image}" alt="${item.name}">
-            <div class="order-item-details">
-                <p>${item.name}</p>
-                <p>₹${item.price}</p>
-                <p>Quantity: ${item.quantity}</p>
-            </div>
-        `;
+        const orderItem = createOrderItemElement(item);
         orderItemsContainer.appendChild(orderItem);
         total += item.price * item.quantity;
     });
 
     totalPriceElement.innerText = total.toFixed(2);
+}
+
+function createOrderItemElement(item) {
+    const orderItem = document.createElement('div');
+    orderItem.classList.add('order-item');
+    orderItem.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <div class="order-item-details">
+            <p>${item.name}</p>
+            <p>₹${item.price}</p>
+            <div class="quantity-controls">
+             
+            </div>
+        </div>
+    `;
+    return orderItem;
 }
 
 function showOrderConfirmation(trackId) {
@@ -150,9 +159,27 @@ function hideOrderConfirmation() {
 }
 
 function saveOrderDetails(orderDetails) {
-    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    let orders = JSON.parse(localStorage.getItem('orders')) || [];
     orders.push(orderDetails);
     localStorage.setItem('orders', JSON.stringify(orders));
+
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    orderDetails.cart.forEach(newItem => {
+        let found = false;
+        for (let i = 0; i < cart.length; i++) {
+            if (cart[i].id === newItem.id) {
+                cart[i].quantity += newItem.quantity;
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            cart.push(newItem);
+        }
+    });
+
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 function displayOrderDetails(trackId) {
@@ -196,10 +223,11 @@ function displayPreviousOrders() {
         orderBox.classList.add('order-box');
         orderBox.innerHTML = `
             <div>
-                <p>Tracking ID: ${order.trackId}</p>
+               <button class="remove-order" onclick="removeOrder('${order.trackId}')">Remove</button>
+                <p>Tracking ID: ${order.trackId}</p>    
                 <p>Name: ${order.name}</p>
                 <p>Total Amount: ₹${calculateTotal(order.cart)}</p>
-                <button class="remove-order" onclick="removeOrder('${order.trackId}')">Remove</button>
+                
             </div>
         `;
 
@@ -233,9 +261,24 @@ function removeOrder(trackId) {
     displayPreviousOrders();
 }
 
+function changeQuantity(itemId, change) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    for (let i = 0; i < cart.length; i++) {
+        if (cart[i].id === itemId) {
+            cart[i].quantity += change;
+            if (cart[i].quantity <= 0) {
+                cart.splice(i, 1); // Remove item if quantity is zero or less
+            }
+            break;
+        }
+    }
+    localStorage.setItem('cart', JSON.stringify(cart));
+    displayOrderSummary(cart); // Update the displayed order summary
+}
+
 function removeItemFromCart(itemId) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart = cart.filter(item => item.id !== itemId);
     localStorage.setItem('cart', JSON.stringify(cart));
-    location.reload(); // Refresh the page to reflect the updated cart
+    displayOrderSummary(cart); // Update the displayed order summary
 }

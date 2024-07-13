@@ -1,10 +1,43 @@
-// Cart slider functionality
+// Toggle the dropdown menu visibility when clicking the "Shop" button
+document.getElementById("shop-button").addEventListener("click", function(event) {
+    event.stopPropagation();
+    var dropdown = document.getElementById("dropdown-content");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+});
+
+// Hide the dropdown menu when clicking outside of it
+document.addEventListener("click", function(event) {
+    var dropdown = document.getElementById("dropdown-content");
+    if (event.target !== dropdown && event.target.closest(".playground") === null) {
+        dropdown.style.display = "none";
+    }
+});
+
+// Toggle the dropdown menu visibility when clicking the "Profile" button
+document.getElementById("profile-button").addEventListener("click", function(event) {
+    event.stopPropagation();
+    var dropdown = document.getElementById("dropdown-content-1");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+});
+
+// Hide the dropdown menu when clicking outside of it
+document.addEventListener("click", function(event) {
+    var dropdown = document.getElementById("dropdown-content-1");
+    if (event.target !== dropdown && event.target.closest(".playground-1") === null) {
+        dropdown.style.display = "none";
+    }
+});
+
+
+// Cart slider
+
 let cart = [];
 const cartSidebar = document.getElementById('cart-sidebar');
 const cartContent = document.getElementById('cart-content');
 const totalItems = document.getElementById('total-items');
 const totalAmount = document.getElementById('total-amount');
 const addToCartBtn = document.getElementById('add-to-cart-btn');
+const closeCartBtn = document.getElementById('close-cart-btn'); // Add this line to select the close button
 
 // Check if cart data exists in localStorage on page load
 window.addEventListener('load', () => {
@@ -17,11 +50,16 @@ window.addEventListener('load', () => {
 
 // Add event listener to the "Add to Cart" button
 addToCartBtn.addEventListener('click', () => {
+    const currentImageSrc = mainImage.src;
+    const currentProductName = productNameElement.innerText;
+    const currentPriceText = productPriceElement.innerText.match(/₹[\d,]+/)[0];
+    const currentPrice = parseInt(currentPriceText.replace(/₹|,/g, ''));
+
     addToCart({
-        name: 'Apple iPhone 15 (128 GB) - Black',
-        price: 72500,
+        name: currentProductName,
+        price: currentPrice,
         quantity: 1,
-        image: '../Img/ProductDetailsImg/Mobiles/Iphone15/1.jpg'
+        image: currentImageSrc
     });
 });
 
@@ -44,6 +82,7 @@ function addToCart(product) {
     } else {
         cart.push(product);
     }
+
     updateCart();
     openCart();
 }
@@ -65,7 +104,7 @@ function updateCart() {
             <img src="${product.image}" alt="${product.name}">
             <div class="cart-item-details">
                 <p>${product.name}</p>
-                <p>₹${product.price}</p>
+                <p>₹${product.price.toLocaleString('en-IN')}</p>
             </div>
             <div class="cart-item-actions">
                 <button onclick="changeQuantity('${product.name}', -1)">-</button>
@@ -78,17 +117,17 @@ function updateCart() {
     });
 
     totalItems.innerText = totalQuantity;
-    totalAmount.innerText = totalCost;
+    totalAmount.innerText = totalCost.toLocaleString('en-IN');
 
     // Save cart to localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-// Change quantity function
-function changeQuantity(productName, change) {
+// Function to change quantity of a product in the cart
+function changeQuantity(productName, amount) {
     const product = cart.find(item => item.name === productName);
     if (product) {
-        product.quantity += change;
+        product.quantity += amount;
         if (product.quantity <= 0) {
             cart = cart.filter(item => item.name !== productName);
         }
@@ -96,16 +135,6 @@ function changeQuantity(productName, change) {
     }
 }
 
-// Proceed to checkout function
-function proceedToCheckout() {
-    // Save cart data to localStorage
-    localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Redirect to the order page
-    window.location.href = 'myorder.html'; // Replace with the actual path to your order page
-}
-
-// Handle cart button click to toggle cart sidebar
 document.addEventListener("DOMContentLoaded", () => {
     const cartButton = document.getElementById("cart-button");
     cartButton.addEventListener("click", () => {
@@ -122,33 +151,19 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-// Dropdown menu functionality
-document.getElementById("shop-button").addEventListener("click", function(event) {
-    event.stopPropagation();
-    var dropdown = document.getElementById("dropdown-content");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-});
+// Proceed to checkout function
+function proceedToCheckout() {
+    alert('Proceeding to checkout with total amount: ₹' + totalAmount.innerText);
+}
 
-document.addEventListener("click", function(event) {
-    var dropdown = document.getElementById("dropdown-content");
-    if (event.target !== dropdown && event.target.closest(".playground") === null) {
-        dropdown.style.display = "none";
-    }
-});
 
-document.getElementById("profile-button").addEventListener("click", function(event) {
-    event.stopPropagation();
-    var dropdown = document.getElementById("dropdown-content-1");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+document.querySelectorAll('.accordion-checkbox').forEach((checkbox) => {
+    checkbox.addEventListener('change', (event) => {
+        const isChecked = event.target.checked;
+        const icon = event.target.nextElementSibling.querySelector('.icon, .icon-5');
+        icon.textContent = isChecked ? '-' : '+';
+    });
 });
-
-document.addEventListener("click", function(event) {
-    var dropdown = document.getElementById("dropdown-content-1");
-    if (event.target !== dropdown && event.target.closest(".playground-1") === null) {
-        dropdown.style.display = "none";
-    }
-});
-
 
 
 // Proceed to checkout function
