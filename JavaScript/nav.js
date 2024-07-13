@@ -1,32 +1,47 @@
-// Toggle the dropdown menu visibility when clicking the "Shop" button
+/// Toggle the dropdown menu visibility when clicking the "Shop" button
 document.getElementById("shop-button").addEventListener("click", function(event) {
     event.stopPropagation();
-    var dropdown = document.getElementById("dropdown-content");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-});
-
-// Hide the dropdown menu when clicking outside of it
-document.addEventListener("click", function(event) {
-    var dropdown = document.getElementById("dropdown-content");
-    if (event.target !== dropdown && event.target.closest(".playground") === null) {
-        dropdown.style.display = "none";
+    var shopDropdown = document.getElementById("dropdown-content");
+    var profileDropdown = document.getElementById("dropdown-content-1");
+    
+    // Close profile dropdown if it's open
+    if (profileDropdown.style.display === "block") {
+        profileDropdown.style.display = "none";
     }
+    
+    // Toggle shop dropdown
+    shopDropdown.style.display = shopDropdown.style.display === "block" ? "none" : "block";
 });
 
 // Toggle the dropdown menu visibility when clicking the "Profile" button
 document.getElementById("profile-button").addEventListener("click", function(event) {
     event.stopPropagation();
-    var dropdown = document.getElementById("dropdown-content-1");
-    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    var profileDropdown = document.getElementById("dropdown-content-1");
+    var shopDropdown = document.getElementById("dropdown-content");
+    
+    // Close shop dropdown if it's open
+    if (shopDropdown.style.display === "block") {
+        shopDropdown.style.display = "none";
+    }
+    
+    // Toggle profile dropdown
+    profileDropdown.style.display = profileDropdown.style.display === "block" ? "none" : "block";
 });
 
-// Hide the dropdown menu when clicking outside of it
+// Hide the dropdown menus when clicking outside of them
 document.addEventListener("click", function(event) {
-    var dropdown = document.getElementById("dropdown-content-1");
-    if (event.target !== dropdown && event.target.closest(".playground-1") === null) {
-        dropdown.style.display = "none";
+    var shopDropdown = document.getElementById("dropdown-content");
+    var profileDropdown = document.getElementById("dropdown-content-1");
+    
+    if (event.target.closest(".playground") === null && shopDropdown.style.display === "block") {
+        shopDropdown.style.display = "none";
+    }
+    
+    if (event.target.closest(".playground-1") === null && profileDropdown.style.display === "block") {
+        profileDropdown.style.display = "none";
     }
 });
+
 
 
 // Cart slider
@@ -173,3 +188,15 @@ function proceedToCheckout() {
     // Redirect to the order page
     window.location.href = 'myorder.html'; // Replace with the actual path to your order page
 }
+
+
+// view More Button
+document.addEventListener('DOMContentLoaded', () => {
+    const viewMoreBtn = document.querySelector('.view-more-btn');
+    const productCart = document.querySelector('.all-product-cart-2');
+
+    viewMoreBtn.addEventListener('click', () => {
+        productCart.classList.toggle('expand');
+        viewMoreBtn.textContent = productCart.classList.contains('expand') ? 'View Less' : 'View More';
+    });
+});
