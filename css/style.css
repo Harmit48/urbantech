@@ -143,11 +143,19 @@ body::-webkit-scrollbar {
   align-items: center;
 }
 
+.con-2-img{
+  margin-right: 30px;
+}
+
 .con-1-text{
   font-size: 24px;
   padding-left: 30px;
 }
 
+.con-2-text{
+  font-size: 24px;
+  padding-left: 30px;
+}
 
 /* Top Brands */
 .top-brand{
