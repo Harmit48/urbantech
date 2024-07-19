@@ -68,7 +68,7 @@ window.addEventListener('load', () => {
 addToCartBtn.addEventListener('click', () => {
     const currentImageSrc = mainImage.src;
     const currentProductName = productNameElement.innerText;
-    const currentPriceText = productPriceElement.innerText.match(/₹\d+,?\d+/)[0];
+    const currentPriceText = productPriceElement.innerText.match(/₹[\d,]+/)[0];
     const currentPrice = parseInt(currentPriceText.replace(/₹|,/g, ''));
     
     addToCart({
@@ -121,7 +121,7 @@ function updateCart() {
             <img src="${product.image}" alt="${product.name}">
             <div class="cart-item-details">
                 <p>${product.name}</p>
-                <p>₹${product.price}</p>
+                <p>₹${product.price.toLocaleString('en-IN')}</p>
             </div>
             <div class="cart-item-actions">
                 <button onclick="changeQuantity('${product.name}', -1)">-</button>

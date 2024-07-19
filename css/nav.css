@@ -34,8 +34,8 @@ body::-webkit-scrollbar {
 .searchBox {
   font-family: "Roboto", sans-serif;
   position: absolute;
-  top: 4.98%;
-  left: 71.9%;
+  top: 3rem;
+  left: 74.3rem;
   transform: translate(-100%, -30%);
   background: #2f3640;
   height: 40px;
@@ -449,4 +449,10 @@ footer {
 
 .footer-section p:last-child {
   margin-bottom: 0;
+}
+
+
+
+@media screen {
+  
 }

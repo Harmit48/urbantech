@@ -1,3 +1,32 @@
+// Toggle the dropdown menu visibility when clicking the "Shop" button
+document.getElementById("shop-button").addEventListener("click", function(event) {
+    event.stopPropagation();
+    var dropdown = document.getElementById("dropdown-content");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+});
+
+// Hide the dropdown menu when clicking outside of it
+document.addEventListener("click", function(event) {
+    var dropdown = document.getElementById("dropdown-content");
+    if (event.target !== dropdown && event.target.closest(".playground") === null) {
+        dropdown.style.display = "none";
+    }
+});
+
+// Toggle the dropdown menu visibility when clicking the "Profile" button
+document.getElementById("profile-button").addEventListener("click", function(event) {
+    event.stopPropagation();
+    var dropdown = document.getElementById("dropdown-content-1");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+});
+
+// Hide the dropdown menu when clicking outside of it
+document.addEventListener("click", function(event) {
+    var dropdown = document.getElementById("dropdown-content-1");
+    if (event.target !== dropdown && event.target.closest(".playground-1") === null) {
+        dropdown.style.display = "none";
+    }
+});
 
 // JavaScript for product page functionality
 
