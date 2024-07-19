@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="form-group">
                     <label for="upiQrCode">Scan UPI QR Code:</label>
-                    <img src="https://via.placeholder.com/150" alt="UPI QR Code" id="upiQrCode">
+                    <img src="../Img/urbantechQRCode.jpg" alt="UPI QR Code" id="upiQrCode">
                 </div>
             `;
         } else if (paymentMethod === 'netBanking') {
@@ -214,7 +214,7 @@ function displayPreviousOrders() {
         orderBox.classList.add('order-box');
         orderBox.innerHTML = `
             <div>
-                <!-- <button class="remove-order" onclick="removeOrder('${order.trackId}')">Remove</button> -->
+                <button class="remove-order" onclick="removeOrder('${order.trackId}')">Remove</button>
                 <p>Tracking ID: ${order.trackId}</p>
                 <p>Name: ${order.name}</p>
                 <p>Total Amount: ₹${calculateTotal(order.cart)}</p>
@@ -244,24 +244,10 @@ function calculateTotal(cart) {
     return total.toFixed(2);
 }
 
-function changeQuantity(itemId, change) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    for (let i = 0; i < cart.length; i++) {
-        if (cart[i].id === itemId) {
-            cart[i].quantity += change;
-            if (cart[i].quantity <= 0) {
-                cart.splice(i, 1); // Remove item if quantity is zero or less
-            }
-            break;
-        }
-    }
-    localStorage.setItem('cart', JSON.stringify(cart));
-    displayOrderSummary(cart); // Update the displayed order summary
-}
+function removeOrder(trackId) {
+    const orders = JSON.parse(localStorage.getItem('orders')) || [];
+    const updatedOrders = orders.filter(order => order.trackId !== trackId);
+    localStorage.setItem('orders', JSON.stringify(updatedOrders));
 
-function removeItemFromCart(itemId) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart = cart.filter(item => item.id !== itemId);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    displayOrderSummary(cart); // Update the displayed order summary
+    displayPreviousOrders();
 }
