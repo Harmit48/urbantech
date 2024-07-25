@@ -1,4 +1,4 @@
-/// Toggle the dropdown menu visibility when clicking the "Shop" button
+// Toggle the dropdown menu visibility when clicking the "Shop" button
 document.getElementById("shop-button").addEventListener("click", function(event) {
     event.stopPropagation();
     var shopDropdown = document.getElementById("dropdown-content");
@@ -33,18 +33,15 @@ document.addEventListener("click", function(event) {
     var shopDropdown = document.getElementById("dropdown-content");
     var profileDropdown = document.getElementById("dropdown-content-1");
     
-    if (event.target.closest(".playground") === null && shopDropdown.style.display === "block") {
+    if (event.target.closest("#shop-button") === null && shopDropdown.style.display === "block") {
         shopDropdown.style.display = "none";
     }
     
-    if (event.target.closest(".playground-1") === null && profileDropdown.style.display === "block") {
+    if (event.target.closest("#profile-button") === null && profileDropdown.style.display === "block") {
         profileDropdown.style.display = "none";
     }
 });
 
-
-
-// Cart slider
 
 let cart = [];
 const cartSidebar = document.getElementById('cart-sidebar');
@@ -52,7 +49,7 @@ const cartContent = document.getElementById('cart-content');
 const totalItems = document.getElementById('total-items');
 const totalAmount = document.getElementById('total-amount');
 const addToCartBtn = document.getElementById('add-to-cart-btn');
-const closeCartBtn = document.getElementById('close-cart-btn'); // Add this line to select the close button
+const closeCartBtn = document.querySelector('.close-cart'); // Correct selector for close button
 
 // Check if cart data exists in localStorage on page load
 window.addEventListener('load', () => {
@@ -65,9 +62,9 @@ window.addEventListener('load', () => {
 
 // Add event listener to the "Add to Cart" button
 addToCartBtn.addEventListener('click', () => {
-    const currentImageSrc = mainImage.src;
-    const currentProductName = productNameElement.innerText;
-    const currentPriceText = productPriceElement.innerText.match(/₹[\d,]+/)[0];
+    const currentImageSrc = mainImage.src; // Ensure mainImage is defined
+    const currentProductName = productNameElement.innerText; // Ensure productNameElement is defined
+    const currentPriceText = productPriceElement.innerText.match(/₹[\d,]+/)[0]; // Ensure productPriceElement is defined
     const currentPrice = parseInt(currentPriceText.replace(/₹|,/g, ''));
 
     addToCart({
@@ -99,7 +96,7 @@ function addToCart(product) {
     }
 
     updateCart();
-    openCart();
+    openCart(); // Open cart when item is added
 }
 
 // Update cart and save to localStorage
@@ -150,6 +147,7 @@ function changeQuantity(productName, amount) {
     }
 }
 
+// Toggle cart visibility on button click
 document.addEventListener("DOMContentLoaded", () => {
     const cartButton = document.getElementById("cart-button");
     cartButton.addEventListener("click", () => {
@@ -161,42 +159,95 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Close cart when clicking the close button
-    document.querySelector('.close-cart').addEventListener('click', () => {
-        closeCart();
-    });
+    if (closeCartBtn) {
+        closeCartBtn.addEventListener('click', () => {
+            closeCart();
+        });
+    }
 });
 
-// Proceed to checkout function
-function proceedToCheckout() {
-    alert('Proceeding to checkout with total amount: ₹' + totalAmount.innerText);
-}
-
-
-document.querySelectorAll('.accordion-checkbox').forEach((checkbox) => {
-    checkbox.addEventListener('change', (event) => {
-        const isChecked = event.target.checked;
-        const icon = event.target.nextElementSibling.querySelector('.icon, .icon-5');
-        icon.textContent = isChecked ? '-' : '+';
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeMenuBtn = document.querySelector('.close-menu');
+    const cartSidebar = document.getElementById('cart-sidebar');
+    const cartIcon = document.querySelector('.cart-icon');
+  
+    // Toggle mobile menu
+    mobileMenuBtn.addEventListener('click', function() {
+      mobileMenu.style.transform = mobileMenu.style.transform === 'translateX(0%)' ? 'translateX(100%)' : 'translateX(0%)';
     });
-});
+  
+    // Close mobile menu
+    closeMenuBtn.addEventListener('click', function() {
+      mobileMenu.style.transform = 'translateX(100%)';
+    });
+  
+    // Toggle cart sidebar
+    cartIcon.addEventListener('click', function() {
+      cartSidebar.classList.toggle('open');
+    });
+  
+    // Close cart sidebar when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!cartSidebar.contains(event.target) && !cartIcon.contains(event.target)) {
+        cartSidebar.classList.remove('open');
+      }
+    });
+  });
+
+  
+
+  
 
 
-// Proceed to checkout function
-function proceedToCheckout() {
-    // Save cart data to sessionStorage
-    sessionStorage.setItem('cart', JSON.stringify(cart));
-    // Redirect to the order page
-    window.location.href = 'myorder.html'; // Replace with the actual path to your order page
-}
-
-
-// view More Button
+// View More Button
 document.addEventListener('DOMContentLoaded', () => {
     const viewMoreBtn = document.querySelector('.view-more-btn');
     const productCart = document.querySelector('.all-product-cart-2');
 
-    viewMoreBtn.addEventListener('click', () => {
-        productCart.classList.toggle('expand');
-        viewMoreBtn.textContent = productCart.classList.contains('expand') ? 'View Less' : 'View More';
+    if (viewMoreBtn) {
+        viewMoreBtn.addEventListener('click', () => {
+            productCart.classList.toggle('expand');
+            viewMoreBtn.textContent = productCart.classList.contains('expand') ? 'View Less' : 'View More';
+        });
+    }
+});
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const closeMenuBtn = document.querySelector('.close-menu');
+    const cartSidebar = document.getElementById('cart-sidebar');
+    const cartIcon = document.querySelector('.cart-icon');
+
+    // Toggle mobile menu
+    mobileMenuBtn.addEventListener('click', function() {
+        if (mobileMenu.style.transform === 'translateX(0%)') {
+            mobileMenu.style.transform = 'translateX(100%)';
+        } else {
+            mobileMenu.style.transform = 'translateX(0%)';
+        }
+    });
+
+    // Close mobile menu
+    closeMenuBtn.addEventListener('click', function() {
+        mobileMenu.style.transform = 'translateX(100%)';
+    });
+
+    // Toggle cart sidebar
+    cartIcon.addEventListener('click', function() {
+        cartSidebar.classList.toggle('open');
+    });
+
+    // Close cart sidebar when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!cartSidebar.contains(event.target) && !cartIcon.contains(event.target)) {
+            cartSidebar.classList.remove('open');
+        }
     });
 });
