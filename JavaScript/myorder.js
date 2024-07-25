@@ -10,13 +10,21 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('orderForm').addEventListener('submit', function(event) {
         event.preventDefault();
 
+        // Validate contact number
+        const contact = document.getElementById('contact').value;
+        if (!isValidContact(contact)) {
+            showContactErrorMessage('Please enter a 10-digit contact number.');
+            return;
+        } else {
+            hideContactErrorMessage();
+        }
+
         // Generate a 7-digit tracking ID
         const trackId = Math.floor(1000000 + Math.random() * 9000000).toString();
 
         // Get order details
         const name = document.getElementById('name').value;
         const address = document.getElementById('address').value;
-        const contact = document.getElementById('contact').value;
         const paymentMethod = document.getElementById('paymentMethod').value;
 
         const orderDetails = {
@@ -251,3 +259,75 @@ function removeOrder(trackId) {
 
     displayPreviousOrders();
 }
+
+function isValidContact(contact) {
+    return /^\d{10}$/.test(contact);
+}
+
+function showContactErrorMessage(message) {
+    let errorElement = document.getElementById('contactErrorMessage');
+    if (!errorElement) {
+        errorElement = document.createElement('span');
+        errorElement.id = 'contactErrorMessage';
+        errorElement.style.color = 'red';
+        document.getElementById('contact').parentElement.appendChild(errorElement);
+    }
+    errorElement.innerText = message;
+}
+
+function hideContactErrorMessage() {
+    const errorElement = document.getElementById('contactErrorMessage');
+    if (errorElement) {
+        errorElement.innerText = '';
+    }
+}
+    // Handle card number and CVV validation
+    document.addEventListener('input', function(event) {
+        const target = event.target;
+
+        if (target.id === 'cardNumber') {
+            validateCardNumber(target);
+        } else if (target.id === 'cvv') {
+            validateCvv(target);
+        }
+    });
+
+    function validateCardNumber(input) {
+        const cardNumber = input.value.replace(/\D/g, ''); // Remove non-digit characters
+        input.value = cardNumber; // Update input value with only digits
+
+        let cardNumberErrorElement = document.getElementById('cardNumberErrorMessage');
+        
+        if (!cardNumberErrorElement) {
+            cardNumberErrorElement = document.createElement('span');
+            cardNumberErrorElement.id = 'cardNumberErrorMessage';
+            cardNumberErrorElement.style.color = 'red';
+            input.parentElement.appendChild(cardNumberErrorElement);
+        }
+
+        if (cardNumber.length === 16) {
+            cardNumberErrorElement.innerText = '';
+        } else {
+            cardNumberErrorElement.innerText = 'Enter 16-Digit Card Number(Only Number)';
+        }
+    }
+
+    function validateCvv(input) {
+        const cvv = input.value.replace(/\D/g, ''); // Remove non-digit characters
+        input.value = cvv; // Update input value with only digits
+
+        let cvvErrorElement = document.getElementById('cvvErrorMessage');
+
+        if (!cvvErrorElement) {
+            cvvErrorElement = document.createElement('span');
+            cvvErrorElement.id = 'cvvErrorMessage';
+            cvvErrorElement.style.color = 'red';
+            input.parentElement.appendChild(cvvErrorElement);
+        }
+
+        if (/^\d{3,4}$/.test(cvv)) {
+            cvvErrorElement.innerText = '';
+        } else {
+            cvvErrorElement.innerText = 'Enter 3-4 Digit Number';
+        }
+    }
