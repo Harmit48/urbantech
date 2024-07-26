@@ -16,6 +16,7 @@ body::-webkit-scrollbar {
   width: 100%;
   height: 89vh;
   background-repeat: none;
+  background-size: cover;
 }
 
 .text-1{
@@ -434,6 +435,10 @@ body::-webkit-scrollbar {
   font-weight: 500;
   padding-left: 10px;
   margin-top: -12px;
+  width: 290px;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
 }
 
 .all-cart-1-text-name{
@@ -564,6 +569,10 @@ body::-webkit-scrollbar {
   font-weight: 500;
   padding-left: 10px;
   margin-top: -12px;
+  width: 290px;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
 }
 
 .a-c-1-t-n-1-2{
@@ -623,4 +632,78 @@ body::-webkit-scrollbar {
   width: 90%;
   height: 90%;
   padding-top: 30px;
+}
+
+
+
+@media screen and (width:1280px) {
+  .text-1 {
+    font-size: 42px;
+}
+.text-2 {
+  font-size: 16px;
+  margin-top: -22px;
+}
+.con-1, .con-2, .con-3, .con-4, .con-5, .con-6 {
+  width: 345px;
+}
+.top-1-img img {
+  width: 100px;
+  height: 100px;
+}
+.top-brand {
+  margin-top: 50px;
+  /* width: 65vw; */
+}
+.col {
+  width: 560px;
+  height: 560px;
+  
+}
+.newproduct-image-1 img {
+  width: 500px;
+  height: 300px;
+}
+.newproduct-image-2 img {
+  width: 300px;
+  height: 300px;
+}
+.newproduct-image-3 img {
+  width: 300px;
+  height: 300px;
+}
+.all-cat-1 {
+  width: 243px;
+  height: 320px;
+}
+.all-cart-1-icon {
+  margin-left: 210px;
+}
+.all-cat-2-1 {
+  width: 243px;
+  height: 320px;
+}
+.all-cart-1-icon-2{
+  margin-left: 205px;
+}
+.all-product-cart-2.expand {
+  max-height: 2700px; /*Adjust height to show all rows*/
+}
+.all-product-cart-2 {
+  max-height: 690px;
+}
+
+.all-cart-1-text-name-phone-2{
+width: 180px;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+}
+.all-cart-1-text-name-phone{
+width: 180px;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+}
+
 }
