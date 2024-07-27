@@ -15,7 +15,7 @@ body::-webkit-scrollbar {
   background-image: url(../Img/HomeImage/home3.jpeg);
   width: 100%;
   height: 89vh;
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -754,8 +754,8 @@ overflow: hidden;
   margin-left: 220px;
 }
 .all-cat-2-1 {
-  width: 264px;
-  height: 345px;
+  width: 19.3vw;
+  height: 45vh;
 }
 .all-cart-1-icon-2{
   margin-left: 215px;
@@ -764,7 +764,7 @@ overflow: hidden;
   max-height: 2700px; /*Adjust height to show all rows*/
 }
 .all-product-cart-2 {
-  max-height: 700px;
+  max-height: 730px;
 }
 
 .all-cart-1-text-name-phone-2{
@@ -778,6 +778,16 @@ width: 180px;
 text-overflow: ellipsis;
 white-space: nowrap;
 overflow: hidden;
+}
+/* main image */
+ .home-1{
+  height: 91vh;
+  background-size: cover;
+ }
+
+.Ipad{
+  bottom: -20vh;
+  right: -17.3vw;
 }
 
 }
