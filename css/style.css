@@ -709,7 +709,7 @@ overflow: hidden;
 }
 
 
-@media screen and (min-width:1300px) and (max-width:1400px) {
+@media screen and (min-width:1366px) and (max-width:1400px) {
   .text-1 {
     font-size: 42px;
     padding-top: 230px;
