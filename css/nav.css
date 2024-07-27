@@ -476,3 +476,25 @@ footer {
 
 }
 
+
+@media screen and (min-width:1300px) and (max-width:1400px) {
+  .searchBox{
+    left: 55.3rem;
+  } 
+  .cart-content {
+    height: 485px;
+}
+.dropdown-content{
+  left: -890px;
+}
+.dropdown-content-1{
+  left: -1050px;
+}
+.logo {
+  padding: 30px 0 0 40px;
+}
+footer {
+  font-size: 25px;
+}
+
+}
