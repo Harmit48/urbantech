@@ -636,9 +636,224 @@ overflow: hidden;
 
 
 
-@media screen and (width:1280px) {
+/* Responsive */
+
+
+/* 10-inch Laptop */
+@media screen and (width:1024px)and (height:600px) {
+  /* main image */
+   .text-1 {
+     font-size: 30px;
+     padding-top: 180px;
+ }
+ .all-product-text-2 {
+   margin-top: 70px;
+ }
+ 
+ .text-2 {
+   font-size: 16px;
+   margin-top: -22px;
+ }
+
+ /* cart slider */
+ .cart-content{
+  height: 324px;
+ }
+ 
+ /* all Categoty */
+ .con-1, .con-2, .con-3, .con-4, .con-5, .con-6 {
+   width: 271px;
+ }
+ .con-1-text {
+   font-size: 17px;
+ }
+ .top-1-img img {
+   width: 78px;
+   height: 80px;
+ }
+ .top-brand {
+   margin-top: 50px;
+   /* width: 65vw; */
+ }
+ .col {
+   width: 435px;
+   height: 490px;
+ }
+ .para {
+   font-size: 2.7vh;
+ }
+ .heading {
+   font-size: 6vh;
+   margin-bottom: 0vh;
+ }
+ .Ipad-btn {
+   font-size: 1.5vh;
+ }
+ 
+ .newproduct-image-1 img {
+   width: 430px;
+   height: 240px;
+   border-radius: 6px;
+ }
+ .newproduct-image-2 img {
+   width: 200px;
+   height: 240px;
+   border-radius: 6px;
+ }
+ .newproduct-image-3 img {
+   width: 210px;
+   height: 240px;
+   border-radius: 6px;
+ }
+ .all-cat-1 {
+   width: 256px;
+   height: 350px;
+ }
+ .all-cart-1-icon {
+   margin-left: 210px;
+ }
+ .all-cat-2-1 {
+   width: 256px;
+   height: 350px;
+ }
+ .all-cart-1-icon-2{
+   margin-left: 210px;
+ }
+ .all-product-cart-2.expand {
+   max-height: 2700px; /*Adjust height to show all rows*/
+ }
+ .all-product-cart-2 {
+   max-height: 730px;
+ }
+ 
+ .all-cart-1-text-name-phone-2{
+ width: 180px;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+ overflow: hidden;
+ }
+ .all-cart-1-text-name-phone{
+ width: 180px;
+ text-overflow: ellipsis;
+ white-space: nowrap;
+ overflow: hidden;
+ }
+ /* All Category */
+ .con-1-img img {
+   width: 80px;
+   height: 80px;
+ }
+ 
+ }
+
+/* 12-inch Laptop */
+@media screen and (min-width:1024px) and (max-width:1279px)and (min-height:768px) and (max-height:768px) {
+ /* main image */
   .text-1 {
     font-size: 42px;
+    padding-top: 230px;
+}
+.all-product-text-2 {
+  margin-top: 70px;
+}
+
+.text-2 {
+  font-size: 16px;
+  margin-top: -22px;
+}
+
+.con-1, .con-2, .con-3, .con-4, .con-5, .con-6 {
+  width: 271px;
+}
+.con-1-text {
+  font-size: 17px;
+}
+.top-1-img img {
+  width: 78px;
+  height: 80px;
+}
+.top-brand {
+  margin-top: 50px;
+  /* width: 65vw; */
+}
+.col {
+  width: 435px;
+  height: 490px;
+}
+.para {
+  font-size: 2.7vh;
+}
+.heading {
+  font-size: 6vh;
+  margin-bottom: 0vh;
+}
+.Ipad-btn {
+  font-size: 1.5vh;
+}
+
+.newproduct-image-1 img {
+  width: 430px;
+  height: 240px;
+  border-radius: 6px;
+}
+.newproduct-image-2 img {
+  width: 200px;
+  height: 240px;
+  border-radius: 6px;
+}
+.newproduct-image-3 img {
+  width: 210px;
+  height: 240px;
+  border-radius: 6px;
+}
+.all-cat-1 {
+  width: 256px;
+  height: 350px;
+}
+.all-cart-1-icon {
+  margin-left: 210px;
+}
+.all-cat-2-1 {
+  width: 256px;
+  height: 350px;
+}
+.all-cart-1-icon-2{
+  margin-left: 210px;
+}
+.all-product-cart-2.expand {
+  max-height: 2700px; /*Adjust height to show all rows*/
+}
+.all-product-cart-2 {
+  max-height: 730px;
+}
+
+.all-cart-1-text-name-phone-2{
+width: 180px;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+}
+.all-cart-1-text-name-phone{
+width: 180px;
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+}
+/* All Category */
+.con-1-img img {
+  width: 80px;
+  height: 80px;
+}
+
+}
+
+
+
+/* 13-inch Laptop */
+@media screen and (min-width:1280px) and (max-width:1365px) and (min-height:800px) and (max-height:800px) {
+  .text-1 {
+    font-size: 42px;
+    padding-top: 230px;
 }
 .text-2 {
   font-size: 16px;
@@ -663,14 +878,17 @@ overflow: hidden;
 .newproduct-image-1 img {
   width: 500px;
   height: 300px;
+  border-radius: 6px;
 }
 .newproduct-image-2 img {
   width: 300px;
   height: 300px;
+  border-radius: 6px;
 }
 .newproduct-image-3 img {
   width: 300px;
   height: 300px;
+  border-radius: 6px;
 }
 .all-cat-1 {
   width: 243px;
@@ -705,15 +923,21 @@ text-overflow: ellipsis;
 white-space: nowrap;
 overflow: hidden;
 }
-
+.all-product-text-2 {
+  margin-top: 70px;
+}
 }
 
-
-@media screen and (min-width:1366px) and (max-width:1400px) {
+/* 15-inch Laptop */
+@media screen and (min-width:1366px) and (max-width:1439px)and (min-height:768px) and (max-height:768px) {
   .text-1 {
     font-size: 42px;
     padding-top: 230px;
 }
+.all-product-text-2 {
+  margin-top: 70px;
+}
+
 .text-2 {
   font-size: 16px;
   margin-top: -22px;
@@ -737,14 +961,17 @@ overflow: hidden;
 .newproduct-image-1 img {
   width: 600px;
   height: 310px;
+  border-radius: 6px;
 }
 .newproduct-image-2 img {
   width: 280px;
   height: 310px;
+  border-radius: 6px;
 }
 .newproduct-image-3 img {
   width: 290px;
   height: 310px;
+  border-radius: 6px;
 }
 .all-cat-1 {
   width: 264px;
@@ -779,15 +1006,4 @@ text-overflow: ellipsis;
 white-space: nowrap;
 overflow: hidden;
 }
-/* main image */
- .home-1{
-  height: 91vh;
-  background-size: cover;
- }
-
-.Ipad{
-  bottom: -20vh;
-  right: -17.3vw;
-}
-
 }
