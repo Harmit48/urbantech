@@ -612,14 +612,14 @@ body::-webkit-scrollbar {
 
 
 /* responsive */
-@media only screen and (min-width: 480px) and (max-width: 768px) {
+@media only screen and (min-width:600px) and (max-width: 767px) {
   /* main image */
 .home-1 {
  height: 35vh;
 }
 /* main image 1 text */
 .text-1 {
- padding-top: 21.5%;
+ padding-top: 20.5%;
  font-size: 1.3rem;
 }
 .text-2 {
@@ -712,7 +712,7 @@ height: 100%;
 
 /* New product three image */
 .newproduct-image-1 {
- width: 75.2vw;
+ width: 77.3vw;
  height: 20vh;
 }
 .newproduct-image-2,
@@ -732,23 +732,23 @@ height: 100%;
 /* all apple product */
 .all-cat-1 {
  /* margin-top: 40px; */
- width: 210px;
- height: 310px;
+ width: 220px;
+ height: 360px;
 }
 .all-cart-1-icon{
- margin-left: 165px;
+ margin-left: 195px;
 }
 /* all product */
 .all-cat-2-1 {
  /* margin-top: 40px; */
- width: 210px;
- height: 310px;
+ width: 220px;
+ height: 360px;
 }
 .all-cart-1-icon-2{
- margin-left: 165px;
+ margin-left: 195px;
 }
 .all-product-cart-2 {
- max-height: 900px;
+ max-height: 1060px;
 }
 .all-product-cart-2.expand {
  max-height: 4500px; /*Adjust height to show all rows*/
@@ -765,10 +765,10 @@ height: 100%;
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 935px) {
      /* main image */
    .home-1 {
-    height: 42vh;
+    height: 49vh;
   }
   /* main image 1 text */
   .text-1 {
@@ -804,7 +804,7 @@ height: 100%;
   }
   .Ipad {
     right: -26vw;
-    bottom: -13vh;
+    bottom: -15vh;
     width: 115%;
     height: 115%;
 }
@@ -820,7 +820,7 @@ height: 100%;
 }
   .col {
     width: 70vw;
-    height: 56vh;
+    height: 65vh;
   }
   .heading{
     font-size: 90px;
@@ -847,20 +847,20 @@ height: 100%;
   /* all apple product */
   .all-cat-1 {
     /* margin-top: 40px; */
-    width: 350px;
+    width: 300px;
     height: 450px;
   }
   .all-cart-1-icon{
-    margin-left: 300px;
+    margin-left: 260px;
   }
   /* all product */
   .all-cat-2-1 {
     /* margin-top: 40px; */
-    width: 350px;
+    width: 300px;
     height: 450px;
   }
   .all-cart-1-icon-2{
-    margin-left: 300px;
+    margin-left: 260px;
   }
   .all-product-cart-2 {
     max-height: 900px;
