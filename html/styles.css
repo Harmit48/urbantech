@@ -1,0 +1,16 @@
+.product-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 16px;
+}
+.product-container {
+    border: 1px solid #ddd;
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+}
+.product-container img {
+    max-width: 100%;
+    height: auto;
+}

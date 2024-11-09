@@ -25,17 +25,26 @@
     <title>UrbanTech</title>
 </head>
 <body>
-   <!-- Navbar -->
+<!-- Navbar -->
 <section>
     <div class="nav-1">
         <div class="navbar-left">
             <div class="logo" onclick="window.location.href = 'index.html';">URBANTECH</div>
         </div>
+
+       <!-- Search Bar -->
+<div class="search">
+    <input type="text" class="search-box" placeholder="Search">
+    <button class="search-btn"><i class="ph-bold ph-magnifying-glass sea"></i></button>
+    <button class="close-btn"><i class="ph-bold ph-x"></i></button>
+</div>
+<!-- Suggestions Container -->
+<div class="suggestions-container" style="display: none;">
+    <!-- Suggestions will be dynamically added here -->
+</div>
+        
+
         <div class="navbar-right">
-            <div class="searchBox">
-                <input class="searchInput" type="text" name="" placeholder="Search">
-                <button class="searchButton" href="#"><i class="ph-bold ph-magnifying-glass"></i></button>
-            </div>
             <!-- Shop button -->
             <div class="playground">
                 <button class="btn btn-1-3-4" id="shop-button">
@@ -66,16 +75,17 @@
                     <a href="#">Contact Us</a>
                     <a href="./html/servicerequestform.html">My Service Requests</a>
                 </div>
-        </div>
-              <!-- Cart Icon -->
-              <div class="cart-icon-container">
+            </div>
+            <!-- Cart Icon -->
+            <div class="cart-icon-container">
                 <button class="btn-1 btn-1-3-4" id="cart-button">
                     <i class="ph-bold ph-shopping-cart"></i>
                 </button>
             </div>
         </div>
     </div>
- </section>
+</section>
+
  
  <!-- Cart Sidebar -->
  <div id="cart-sidebar" class="cart-sidebar">
@@ -727,6 +737,8 @@
             </div>
         </div>
     </footer>
+
+
 
     <script src="./JavaScript/index"></script>
     <!-- <script src="./JavaScript/nav.js"></script> -->

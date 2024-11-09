@@ -186,7 +186,7 @@ function proceedToCheckout() {
     // Save cart data to sessionStorage
     sessionStorage.setItem('cart', JSON.stringify(cart));
     // Redirect to the order page
-    window.location.href = './html/myorder.html'; // Replace with the actual path to your order page
+    window.location.href = '../html/iphone15.html'; // Replace with the actual path to your order page
 }
 
 
@@ -199,4 +199,113 @@ document.addEventListener('DOMContentLoaded', () => {
         productCart.classList.toggle('expand');
         viewMoreBtn.textContent = productCart.classList.contains('expand') ? 'View Less' : 'View More';
     });
+});
+
+// search bar 
+
+const searchBox = document.querySelector('.search-box');
+const searchBtn = document.querySelector('.search-btn');
+const search = document.querySelector('.search');
+const closeBtn = document.querySelector('.close-btn');
+const suggestionsContainer = document.querySelector('.suggestions-container');
+
+searchBtn.addEventListener('click', function(){
+    console.log(search.classList.contains('active'))
+    if(search.classList.contains('active')){
+        searchBox.value = ''
+    }
+    else {
+        search.classList.add('active');
+        searchBox.focus()
+    }
+})
+
+closeBtn.addEventListener('click', function(){
+    search.classList.remove('active');
+    searchBox.value = '';
+
+})
+
+
+// Product Data with Specific URLs
+const productData = [
+    { name: "iPhone 15", price: "$799", image: "./Img/HomeImage/Apple/iPhone15.png", url: "./html/iphone15.html", brand: "apple" },
+    { name: "iPhone 15 Pro", price: "$999", image: "./Img/HomeImage/Apple/iPhone15Pro.png", url: "./html/iphone15pro.html", brand: "apple" },
+    { name: "MacBook Air", price: "$1199", image: "link_to_image", url: "./html/macbookair2022m2chip.html", brand: "apple" },
+    { name: "Samsung Galaxy S24", price: "$899", image: "link_to_image", url: "./html/galaxys24.html", brand: "samsung" },
+    { name: "Samsung Galaxy Tab", price: "$649", image: "link_to_image", url: "./html/galaxytab.html", brand: "samsung" }
+];
+
+// Toggle search bar activation
+searchBtn.addEventListener('click', function(){
+    if (search.classList.contains('active')) {
+        searchBox.value = ''; // Clear search input if closing search
+    } else {
+        search.classList.add('active');
+        searchBox.focus();    // Focus on search input when opening
+    }
+});
+
+// Close search bar and clear suggestions
+closeBtn.addEventListener('click', function(){
+    search.classList.remove('active');
+    searchBox.value = '';
+    suggestionsContainer.style.display = 'none';
+});
+
+// Detect Enter key and show suggestions
+searchBox.addEventListener('keyup', function(event) {
+    const query = searchBox.value.toLowerCase().trim();
+    
+    if (event.key === "Enter" && query) {
+        // Redirect to search results page
+        window.location.href = `../html/results.html?search=${query}`;
+        searchBox.value = ''; // Clear search box after redirect
+    } else {
+        // Clear previous suggestions
+        suggestionsContainer.innerHTML = '';
+        
+        // Filter products based on query
+        const matchingProducts = productData.filter(product =>
+            product.name.toLowerCase().includes(query)
+        );
+        
+        if (query && matchingProducts.length > 0) {
+            suggestionsContainer.style.display = 'block';
+            
+            // Display matching products
+            matchingProducts.forEach(product => {
+                const item = document.createElement('div');
+                item.classList.add('suggestion-item');
+                item.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}">
+                    <div><strong>${product.name}</strong><br>${product.price}</div>
+                `;
+                
+                // Redirect to specific product page on click
+                item.addEventListener('click', () => {
+                    if (product.url) {
+                        window.location.href = product.url;
+                    }
+                    searchBox.value = ''; // Clear search box after redirect
+                });
+                
+                suggestionsContainer.appendChild(item);
+            });
+        } else {
+            suggestionsContainer.style.display = 'none';
+        }
+    }
+});
+
+// Handle search button click to navigate based on input
+searchBtn.addEventListener('click', function(){
+    const query = searchBox.value.toLowerCase().trim();
+    if (!search.classList.contains('active')){
+        search.classList.add('active');
+        searchBox.focus();
+    } else if (query) {
+        window.location.href = `results.html?search=${query}`;
+        searchBox.value = '';  // Clear search box after redirect
+    }
 });
