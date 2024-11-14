@@ -47,11 +47,19 @@
         <div class="navbar-left">
             <div class="logo" onclick="window.location.href = '../index.html';">URBANTECH</div>
         </div>
+
+        <!-- Search Bar -->
+<div class="search">
+    <input type="text" class="search-box" placeholder="Search">
+    <button class="search-btn"><i class="ph-bold ph-magnifying-glass sea"></i></button>
+    <button class="close-btn"><i class="ph-bold ph-x"></i></button>
+</div>
+<!-- Suggestions Container -->
+<div class="suggestions-container" style="display: none;">
+    <!-- Suggestions will be dynamically added here -->
+</div>
+
         <div class="navbar-right">
-            <div class="searchBox">
-                <input class="searchInput" type="text" name="" placeholder="Search">
-                <button class="searchButton" href="#"><i class="ph-bold ph-magnifying-glass"></i></button>
-            </div>
             <!-- Shop button -->
             <div class="playground">
                 <button class="btn btn-1-3-4" id="shop-button">
@@ -112,21 +120,49 @@
 
     <!-- slider -->
     <section>
-        <div class="JustLaunched-1">
-            <div class="JustLaunched-p">
-                <p>JustLaunched</p>
+        <div class="JustLaunched-p">
+            <p>JustLaunched</p>
+        </div>  
+
+        <!-- slider code -->
+        <div class="slideshow-container">
+
+            <div class="mySlides fade">
+              <!-- <div class="numbertext">1 / 3</div> -->
+              <img src="../Img/MobileShop/JustLaunched/s24fe.webp" style="width: 224.4%; height: 850px;">
+              <!-- <div class="text">Caption Text</div> -->
             </div>
-        </div>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="../Img/MobileShop/JustLaunched/IqooNeo9Pro.jpg"></div>
-                <div class="swiper-slide"><img src="../Img/MobileShop/JustLaunched/IqooZ9.jpg"></div>
-                <div class="swiper-slide"><img src="../Img/MobileShop/JustLaunched/OnePlus.jpg"></div>
+            
+            <div class="mySlides fade">
+              <!-- <div class="numbertext">2 / 3</div> -->
+              <img src="../Img/MobileShop/JustLaunched/iphone16.jpeg" style="width:224.4%; height: 850px;">
+              <!-- <div class="text">Caption Two</div> -->
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <!-- <div class="swiper-pagination"></div> -->
-        </div>
+            
+            <div class="mySlides fade">
+              <!-- <div class="numbertext">3 / 3</div> -->
+              <img src="../Img/MobileShop/JustLaunched/oneplusnordce4.jpeg" style="width:224.4%; height: 850px;">
+              <!-- <div class="text">Caption Three</div> -->
+            </div>
+
+            <div class="mySlides fade">
+                <!-- <div class="numbertext">3 / 3</div> -->
+                <img src="../Img/MobileShop/JustLaunched/googlepixel9.jpeg" style="width:224.4%; height: 850px;">
+                <!-- <div class="text">Caption Three</div> -->
+              </div>
+
+              <div class="mySlides fade">
+                <!-- <div class="numbertext">3 / 3</div> -->
+                <img src="../Img/MobileShop/JustLaunched/nothingphone2a.jpeg" style="width:224.4%; height: 850px;">
+                <!-- <div class="text">Caption Three</div> -->
+              </div>
+            
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+            
+            </div>
+            <br>
+
     </section>
 
 
@@ -450,7 +486,35 @@
         <!-- Swiper JS -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="https://unpkg.com/@phosphor-icons/web"></script>
-        <!-- <script src="../JavaScript/mobile.js"></script> -->
-        <script src="../JavaScript/nav.js"></script>
+        <!-- <script src="../JavaScript/m"></script> -->
+        <script src="../JavaScript/mobile.js"></script>
+        <script>
+            let slideIndex = 1;
+            showSlides(slideIndex);
+            
+            function plusSlides(n) {
+              showSlides(slideIndex += n);
+            }
+            
+            function currentSlide(n) {
+              showSlides(slideIndex = n);
+            }
+            
+            function showSlides(n) {
+              let i;
+              let slides = document.getElementsByClassName("mySlides");
+              let dots = document.getElementsByClassName("dot");
+              if (n > slides.length) {slideIndex = 1}    
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+              slides[slideIndex-1].style.display = "block";  
+              dots[slideIndex-1].className += " active";
+            }
+            </script>
     </body>
 </html>

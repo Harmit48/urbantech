@@ -1,3 +1,4 @@
+/* Main body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,6 +11,7 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Container and Header styling */
 .results-container {
     width: 80%;
     max-width: 1200px;
@@ -31,6 +33,57 @@ header h1 {
     margin-top: 10px;
 }
 
+/* Filter section styling */
+.filter-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    background-color: #007bff;
+    border-radius: 8px;
+}
+
+.filter-input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 120px;
+    text-align: center;
+}
+
+#filter-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#filter-button:hover {
+    background-color: #003f8a;
+}
+
+#back-button {
+    padding: 8px 16px;
+    font-size: 16px;
+    background-color: #666;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#back-button:hover {
+    background-color: #444;
+}
+
+/* Product display section styling */
 .products-container {
     display: flex;
     flex-wrap: wrap;
