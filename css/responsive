@@ -1,0 +1,407 @@
+
+/* responsive */
+@media only screen and (min-width:600px) and (max-width: 767px) {
+  /* main image */
+.home-1 {
+ height: 35vh;
+}
+/* main image 1 text */
+.text-1 {
+ padding-top: 20.5%;
+ font-size: 1.3rem;
+}
+.text-2 {
+ width: 230px;
+ margin-top: 15px;
+ margin-left: -3px;
+ /* font-size: 20px; */
+}
+.cta span{
+  font-size: 14px;
+}
+
+/* all Category */
+.con-1,.con-2,.con-3,.con-4,.con-5,.con-6 {
+ width: 65vw;
+ margin-left: 25px;
+}
+/* top Brand logo */
+.top-1-img {
+ width: 110px;
+ height: 60px;
+}
+
+/* two image of apple product */
+.row-sec{
+ flex-wrap: wrap;
+ justify-content: center;
+}
+
+.col-1{
+ margin-left: 138px;
+ margin-right: 138px;
+ /* justify-content: center; */
+}
+.Ipad {
+ right: -38vw;
+ bottom: -13vh;
+ width: 130%;
+ height: 115%;
+}
+.col-2{
+ margin-left: 138px;
+ margin-right: 138px;
+}
+.AppleWatch {
+right: -40.8vw;
+bottom: -7vh;
+width: 100%;
+height: 100%;
+}
+.col {
+ width: 90vw;
+ height: 50vh;
+}
+.heading{
+ font-size: 80px;
+ margin-top: 30px;
+}
+.para{
+ margin-top: -20px;
+ font-size: 24px;
+ margin-bottom: 20px;
+}
+.Ipad-btn {
+  font-size: 19px;
+  padding: 15px 30px;
+  border-radius: 20px;
+}
+/* Apple Watch */
+.col-2 {
+  width: 90vw;
+  height: 50vh;
+  margin-top: -5px;
+ }
+.para-2{
+  margin-top: -20px;
+  font-size: 30px;
+  margin-left: 13px;
+  margin-bottom: 20px;
+ }
+
+.Ipad-btn-2 {
+  font-size: 19px;
+  padding: 15px 30px;
+  margin-left: 13px;
+  border-radius: 20px;
+}
+
+
+
+/* New product three image */
+.newproduct-image-1 {
+ width: 77.3vw;
+ height: 20vh;
+}
+.newproduct-image-2,
+.newproduct-image-3 {
+ width: 30vw;
+ height: 20vh;
+ margin-top: 20px;
+}
+
+.newproduct-image{
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+
+/* all apple product */
+.all-cat-1 {
+ /* margin-top: 40px; */
+ width: 220px;
+ height: 360px;
+}
+.all-cart-1-icon{
+ margin-left: 195px;
+}
+/* all product */
+.all-cat-2-1 {
+ /* margin-top: 40px; */
+ width: 220px;
+ height: 360px;
+}
+.all-cart-1-icon-2{
+ margin-left: 195px;
+}
+.all-product-cart-2 {
+ max-height: 1060px;
+}
+.all-product-cart-2.expand {
+ max-height: 4500px; /*Adjust height to show all rows*/
+}
+.all-cart-1-text-name-phone {
+  width: 160px;
+}
+.all-cart-1-text-name-phone-2 {
+  width: 160px;
+}
+.all-product-text-2 {
+  margin-top: 50px;
+}
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 935px) {
+     /* main image */
+   .home-1 {
+    height: 49vh;
+  }
+  /* main image 1 text */
+  .text-1 {
+    padding-top: 18%;
+    font-size: 1.6rem;
+  }
+  .text-2 {
+    width: 295px;
+    margin-top: 15px;
+    /* font-size: 20px; */
+  }
+
+  /* all Category */
+  .con-1,.con-2,.con-3,.con-4,.con-5,.con-6 {
+    width: 39vw;
+  }
+  /* top Brand logo */
+  .top-1-img {
+    width: 110px;
+    height: 80px;
+  }
+
+  /* two image of apple product */
+  .row-sec{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .col-1{
+    margin-left: 138px;
+    margin-right: 138px;
+    /* justify-content: center; */
+  }
+  .Ipad {
+    right: -26vw;
+    bottom: -15vh;
+    width: 115%;
+    height: 115%;
+}
+  .col-2{
+    margin-left: 138px;
+    margin-right: 138px;
+}
+  .AppleWatch {
+  right: -32vw;
+  bottom: -7vh;
+  width: 100%;
+  height: 100%;
+}
+  .col {
+    width: 70vw;
+    height: 65vh;
+  }
+  .heading{
+    font-size: 90px;
+    margin-top: 30px;
+  }
+  .para{
+    margin-top: -20px;
+    font-size: 30px;
+  }
+
+
+  /* New product three image */
+  .newproduct-image-1 {
+    width: 52vw;
+    height: 20vh;
+  }
+  .newproduct-image-2,
+  .newproduct-image-3 {
+    width: 22vw;
+    height: 20vh;
+  }
+
+
+  /* all apple product */
+  .all-cat-1 {
+    /* margin-top: 40px; */
+    width: 300px;
+    height: 450px;
+  }
+  .all-cart-1-icon{
+    margin-left: 260px;
+  }
+  /* all product */
+  .all-cat-2-1 {
+    /* margin-top: 40px; */
+    width: 300px;
+    height: 450px;
+  }
+  .all-cart-1-icon-2{
+    margin-left: 260px;
+  }
+  .all-product-cart-2 {
+    max-height: 900px;
+  }
+  .all-product-cart-2.expand {
+    max-height: 4500px; /*Adjust height to show all rows*/
+  }
+}
+
+
+
+@media only screen and (min-width: 1200px) and (max-width: 1450px) {
+   /* main image */
+   .home-1 {
+    height: 70vh;
+  }
+  /* main image 1 text */
+  .text-1 {
+    padding-top: 20%;
+    font-size: 3.1rem;
+  }
+  .text-2 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+  }
+
+  /* all Category */
+  .con-1,.con-2,.con-3,.con-4,.con-5,.con-6 {
+    width: 27vw;
+  }
+  /* top Brand logo */
+  .top-1-img {
+    width: 110px;
+    height: 110px;
+  }
+
+  /* two image of apple product */
+  .col {
+    width: 43.4vw;
+    height: 56vh;
+  }
+  .heading{
+    font-size: 70px;
+    margin-top: 30px;
+  }
+  .para{
+    font-size: 26px;
+  }
+  /* New product three image */
+  .newproduct-image-1 {
+    width: 48vw;
+    height: 31vh;
+  }
+  .newproduct-image-2,
+  .newproduct-image-3 {
+    width: 22vw;
+    height: 31vh;
+  }
+  /* all apple product */
+  .all-cat-1 {
+    margin-top: 40px;
+    width: 280px;
+    height: 400px;
+  }
+  .all-cart-1-icon{
+    margin-left: 230px;
+  }
+  /* all product */
+  .all-cat-2-1 {
+    margin-top: 40px;
+    width: 280px;
+    height: 400px;
+  }
+  .all-cart-1-icon-2{
+    margin-left: 240px;
+  }
+  .all-product-cart-2 {
+    max-height: 900px;
+  }
+
+}
+
+
+
+@media only screen and (min-width: 1450px) and (max-width: 1600px) {
+  /* main image */
+  .home-1 {
+    height: 70vh;
+  }
+  /* main image 1 text */
+  .text-1 {
+    padding-top: 17.4%;
+    font-size: 3.1rem;
+  }
+  .text-2 {
+    margin-top: 15px;
+    font-size: 1.2rem;
+  }
+  .con-1,
+  .con-2,
+  .con-3,
+  .con-4,
+  .con-5,
+  .con-6 {
+    width: 28vw;
+  }
+  /* top Brand logo */
+  .top-1-img {
+    width: 120px;
+    height: 120px;
+  }
+
+
+  /* two image of apple product */
+  .col {
+    width: 44vw;
+    height: 56vh;
+  }
+  .heading{
+    font-size: 70px;
+    margin-top: 30px;
+  }
+  .para{
+    font-size: 26px;
+  }
+
+  /* New product three image */
+  .newproduct-image-1 {
+    width: 48vw;
+    height: 31vh;
+  }
+  .newproduct-image-2,
+  .newproduct-image-3 {
+    width: 22vw;
+    height: 31vh;
+  }
+  /* all apple product */
+  .all-cat-1 {
+    width: 310px;
+  }
+  .all-cart-1-icon{
+    margin-left: 270px;
+  }
+  /* all product */
+  .all-cat-2-1 {
+    width: 304px;
+    height: 450px;
+  }
+  .all-cart-1-icon-2{
+    margin-left: 262px;
+  }
+  .all-product-cart-2 {
+    max-height: 900px;
+  }
+
+}

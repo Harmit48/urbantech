@@ -1,0 +1,412 @@
+ <!DOCTYPE html>
+ <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 15</title>
+     <!-- favbicon -->
+     <link rel="icon" type="image/x-icon" href="../Img/HomeImage/favicon.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto+Condensed:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Online Icon Link -->
+ 
+    <link rel="stylesheet" href="../css/productdetails.css">
+    <link rel="stylesheet" href="../css/headphone.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- <link rel="stylesheet" href="../css/nav.css"> -->
+</head>
+    <body>
+
+
+ <section>
+    <div class="nav-1">
+        <div class="navbar-left">
+            <div class="logo" onclick="window.location.href = '../index.html';">URBANTECH</div>
+        </div>
+        <div class="navbar-right">
+            <div class="searchBox">
+                <input class="searchInput" type="text" name="" placeholder="Search">
+                <button class="searchButton" href="#"><i class="ph-bold ph-magnifying-glass"></i></button>
+            </div>
+            <!-- Shop button -->
+            <div class="playground">
+                <button class="btn btn-1-3-4" id="shop-button">
+                    <i class="ph ph-tote"></i>
+                    <span class="shop-con cart-icon">Shop</span>
+                </button>
+                <div class="dropdown-content" id="dropdown-content">
+                    <a href="#">All Product</a>
+                    <a href="../html/mobile.html">Mobile</a>
+                    <a href="../html/laptop.html">Laptop</a>
+                    <a href="../html/tablet.html">Tablets & iPads</a>
+                    <a href="../html/HeadPhone.html">Audio Product</a>
+                    <a href="../html/smartwatch.html">SmartWatches</a>
+                    <a href="../html/accessories.html">Accessories</a>
+                </div>
+            </div>
+            <!-- Profile Button -->
+            <div class="playground-1">
+                <button class="btn-1 btn-1-3-4" id="profile-button">
+                    <i class="ph-bold ph-user cart-icon-1"></i>
+                    <span class="shop-con-1">Profile</span>
+                </button>
+                <div class="dropdown-content-1" id="dropdown-content-1">
+                    <a href="../html/Login.html">Login</a>
+                    <a href="../html/my profile.html">My Profile</a>
+                    <a href="#">My Orders</a>
+                    <a href="#">Cart</a>
+                    <a href="#">Contact Us</a>
+                    <a href="../html/servicerequestform.html">My Service Requests</a>
+                </div>
+        </div>
+              <!-- Cart Icon -->
+              <div class="cart-icon-container">
+                <button class="btn-1 btn-1-3-4" id="cart-button">
+                    <i class="ph-bold ph-shopping-cart"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Cart Sidebar  for nav bar icon-->
+<div id="cart-sidebar" class="cart-sidebar">
+    <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <span class="close-cart" onclick="closeCartone()">&times;</span>
+    </div>
+    <div class="cart-content" id="cart-content">
+        <!-- Cart items will be dynamically added here -->
+    </div>
+    <div class="cart-footer">
+        <p class="t-i">Total Items: <span id="total-items">0</span></p>
+        <p class="t-a">Total Amount: ₹<span id="total-amount">0</span></p>
+        <button class="btn-proceed" onclick="proceedToCheckout()">Proceed to Buy</button>
+    </div>
+</div>
+        </div>
+    </div>
+</section>
+<section class="container">
+    <!-- Section 1: Thumbnails -->
+        <div class="thumbnails-section">
+            <img src="../Img/ProductDetailsImg/Mobiles/iphone 16/11.jpg" alt="Thumbnail 1" class="thumbnail" data-full="../Img/ProductDetailsImg/Mobiles/Iphone15/1.jpg">
+            <img src="../Img/ProductDetailsImg/Mobiles/Iphone15/2.jpg" alt="Thumbnail 2" class="thumbnail" data-full="../Img/ProductDetailsImg/Mobiles/Iphone15/2.jpg">
+            <img src="../Img/ProductDetailsImg/Mobiles/Iphone15/3.jpg" alt="Thumbnail 3" class="thumbnail" data-full="../Img/ProductDetailsImg/Mobiles/Iphone15/3.jpg">
+            <img src="../Img/ProductDetailsImg/Mobiles/Iphone15/4.jpg" alt="Thumbnail 4" class="thumbnail" data-full="../Img/ProductDetailsImg/Mobiles/Iphone15/4.jpg">
+            <img src="../Img/ProductDetailsImg/Mobiles/Iphone15/5.jpg" alt="Thumbnail 5" class="thumbnail" data-full="../Img/ProductDetailsImg/Mobiles/Iphone15/5.jpg">
+            <img src="../Img/ProductDetailsImg/Mobiles/Iphone15/6.jpg" alt="Thumbnail 5" class="thumbnail" data-full="../Img/ProductDetailsImg/Mobiles/Iphone15/6.jpg">
+        </div>
+                 
+<!-- Section 2: Main Image -->
+    <div class="main-image-section">
+        <div class="picture" id="picture">
+            <img src="../Img/ProductDetailsImg/Mobiles/Iphone15/1.jpg" alt="Apple iPhone 15" class="main-product-image" id="mainImage">
+        <div id="zoom-window"></div>
+        </div>
+    </div>
+                 
+<!-- Section 3: Price and Details -->
+    <div class="product-details">
+        <h1>Apple iPhone 15 (128 GB) - Black</h1><hr>
+            <div class="price-section">
+                <p class="price"><span class="discount">-10%</span> ₹71,999</p>
+                <p class="original-price">M.R.P.: <del>₹79,900</del></p>
+                <p class="inclusive">Inclusive of all taxes</p>
+                <p class="emi">EMI starts at ₹3,491. No Cost EMI available</p><hr>
+            </div>
+                 
+<!-- Section 4: Color and Size Options -->
+    <div class="color-selection">
+        <p>Colour:</p>
+        <div class="color-option" data-color="black" > <img src="../Img/ProductDetailsImg/Mobiles/Iphone15/1.jpg"> </div>
+        <div class="color-option" data-color="blue" > <img src="../Img/ProductDetailsImg/Mobiles/Iphone15/b1.jpg"> </div>
+        <div class="color-option" data-color="green" > <img src="../Img/ProductDetailsImg/Mobiles/Iphone15/g1.jpg"> </div>
+        <div class="color-option" data-color="pink" > <img src="../Img/ProductDetailsImg/Mobiles/Iphone15/p1.jpg"> </div>
+        <div class="color-option" data-color="yellow"> <img src="../Img/ProductDetailsImg/Mobiles/Iphone15/y1.jpg"> </div>
+    </div>
+    <div class="size-selection">
+        <p>Size:</p>
+        <button class="size-option" data-size="128GB">128 GB</button>
+        <button class="size-option" data-size="256GB">256 GB</button>
+        <button class="size-option" data-size="512GB">512 GB</button>
+    </div>
+    <div class="btn-1-p-d">
+        <button class="btn-1-1" id="add-to-cart-btn">Add To Cart</button> <!-- Add an ID to this button -->
+        <button class="btn-1-2">Buy Now</button>
+    </div>
+
+
+    <div class="accordion">
+        <div class="accordion-item">
+            <input type="checkbox" id="accordion1" class="accordion-checkbox">
+            <label class="accordion-button" for="accordion1">
+                Product Details
+                <!-- <span class="icon-5">+</span> -->
+            </label>
+            <div class="accordion-content">
+                <table>
+                    <tr>
+                        <td>Brand :</td>
+                        <td>Apple</td>
+                    </tr>
+                    <tr>
+                        <td>Model Name :</td>
+                        <td>iPhone 15</td>
+                    </tr>
+                    <tr>
+                        <td>Display :</td>
+                        <td>6.1-inch Super Retina XDR Display</td>
+                    </tr>
+                    <tr>
+                        <td>Processor :</td>
+                        <td>A16 Bionic chip</td>
+                    </tr>
+                    <tr>
+                        <td>Operating System :</td>
+                        <td>iOS 17</td>
+                    </tr>
+                    <tr>
+                        <td>Cellular Technology :</td>
+                        <td>5G</td>
+                    </tr>
+                    <tr>
+                        <td>Network Service Provider :</td>
+                        <td>Unlocked (varies by retailer)</td>
+                    </tr>
+                    <tr>
+                        <td>Battery Capacity :</td>
+                        <td>3240mAh (typical)</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <input type="checkbox" id="accordion2" class="accordion-checkbox">
+            <label class="accordion-button" for="accordion2">
+                Technical Details
+
+                <!-- <span class="icon">+</span> -->
+            </label>
+            <div class="accordion-content">
+                <table>
+                    <tr>
+                        <td>Ram :</td>
+                        <td>6GB</td>
+                    </tr>
+                    <tr>
+                        <td>Storage :</td>
+                        <td>128GB, 256GB, 512GB</td>
+                    </tr>
+                    <tr>
+                        <td>Expandable Storage :</td>
+                        <td>Not supported</td>
+                    </tr>
+                    <tr>
+                        <td>Rear Camera :</td>
+                        <td>Dual 48MP wide and 12MP ultra-wide cameras</td>
+                    </tr>
+                    <tr>
+                        <td>Charging :</td>
+                        <td>USB-C, 20W fast charging, MagSafe wireless charging</td>
+                    </tr>
+                    <tr>
+                        <td>Dimensions :</td>
+                        <td>147.6 x 71.6 x 7.8 mm</td>
+                    </tr>
+                    <tr>
+                        <td>Weight :</td>
+                        <td>171 G</td>
+                    </tr>
+                    <tr>
+                        <td>Fingerprint Sensor :</td>
+                        <td>Not available, uses Face ID</td>
+                    </tr>
+                    <tr>
+                        <td>GPS :</td>
+                        <td>GPS, GLONASS, Galileo, QZSS, BeiDou</td>
+                    </tr>
+                    <tr>
+                        <td>Audio Jack :</td>
+                        <td>Not available</td>
+                    </tr>
+                    <tr>
+                        <td>Operating System Updates :</td>
+                        <td>iOS 17</td>
+                    </tr>
+                    <tr>
+                        <td>Water Resistance :</td>
+                        <td>IP68</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>    
+
+                 
+<!-- Cart Sidebar for add to cart button -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <span class="close-cart" onclick="closeCart()">&times;</span>
+        </div>
+        <div class="cart-content" id="cart-content">
+    <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <p>Total Items: <span id="total-items">0</span></p>
+            <p>Total Amount: ₹<span id="total-amount">0</span></p>
+            <button class="btn-proceed" onclick="proceedToCheckout()">Proceed to Buy</button>
+        </div>
+    </div>
+</div>
+</section>
+
+<section>
+    <div class="second-image-1"><img src="../Img/ProductDetailsImg/Mobiles/Iphone15/o1.png"></div>
+    <div class="photo">
+    <div class="second-image-2"><img src="../Img/ProductDetailsImg/Mobiles/Iphone15/o2.png"></div>
+    <div class="second-image-two">
+    <div class="second-image-3"><img src="../Img/ProductDetailsImg/Mobiles/Iphone15/o3.png"></div>
+    <div class="second-image-4"><img src="../Img/ProductDetailsImg/Mobiles/Iphone15/o4.png"></div>
+ </div>
+ <div class="second-image-two-1">
+    <div class="second-image-5"><img src="../Img/ProductDetailsImg/Mobiles/Iphone15/o5.png"></div>
+    <div class="second-image-6"><img src="../Img/ProductDetailsImg/Mobiles/Iphone15/o6.png"></div>
+ </div>
+    <div class="second-image-7"><img src="../Img/ProductDetailsImg/Mobiles/Iphone15/o7.png"></div>
+ <div class="second-image-two-1">
+        <div class="second-image-8"><img src="../Img/ProductDetailsImg/Mobiles/Iphone15/o8.png"></div>
+        <div class="second-image-9"><img src="../Img/ProductDetailsImg/Mobiles/Iphone15/o9.png"></div>
+ </div>
+ <div class="second-image-two-1">
+        <div class="second-image-10"><img src="../Img/ProductDetailsImg/Mobiles/Iphone15/o10.png"></div>
+        <div class="second-image-11"><img src="../Img/ProductDetailsImg/Mobiles/Iphone15/o11.png"></div>
+ </div>
+</div>
+ </section>
+
+
+
+ <!-- other Product -->
+ <section>
+    <div class="all-product">
+        <div class="all-product-cart">
+         <!-- 2 -->
+         <div class="all-cat-1">
+            <div class="all-cart-1-image">
+                <img src="../Img/HomeImage/Apple/iPhone15Pro.png" onclick="window.location.href = 'iphone15pro.html';">
+            </div>
+            <div class="all-cart-1-text">
+                <div class="all-cart-1-text-icon">
+                    <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                </div>
+                <div class="all-cart-1-text-name">
+                    <p class="all-cart-1-text-name-phone">iPhone 15 Pro</p>
+                    <p class="a-c-1-t-n-1"><i class="ph ph-currency-inr"></i>1,39,900</p>
+                </div>
+            </div>
+        </div>
+        <!-- 3 -->
+        <div class="all-cat-1">
+            <div class="all-cart-1-image">
+                <img src="../Img/HomeImage/Apple/iPhone15ProMax.png" onclick="window.location.href = 'iphone15promax.html';">
+            </div>
+            <div class="all-cart-1-text">
+                <div class="all-cart-1-text-icon">
+                    <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                </div>
+                <div class="all-cart-1-text-name">
+                    <p class="all-cart-1-text-name-phone">iPhone 15 Pro Max</p>
+                    <p class="a-c-1-t-n-1"><i class="ph ph-currency-inr"></i>1,50,090</p>
+                </div>
+            </div>
+        </div>
+        <!-- 4 -->
+        <div class="all-cat-1">
+            <div class="all-cart-1-image">
+                <img src="../Img/HomeImage/Apple/iPadAir5Gen.png" onclick="window.location.href = 'ipadair5generation.html';">
+            </div>
+            <div class="all-cart-1-text">
+                <div class="all-cart-1-text-icon">
+                    <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                </div>
+                <div class="all-cart-1-text-name">
+                    <p class="all-cart-1-text-name-phone">iPad Air 5 Generation</p>
+                    <p class="a-c-1-t-n-1"><i class="ph ph-currency-inr"></i>74,900</p>
+                </div>
+            </div>
+        </div>
+        <!-- 5 -->
+        <div class="all-cat-1">
+            <div class="all-cart-1-image">
+                <img src="../Img/HomeImage/Apple/airPodsPro2Gen.png" onclick="window.location.href = 'airpodspro2generation.html';">
+            </div>
+            <div class="all-cart-1-text">
+                <div class="all-cart-1-text-icon">
+                    <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+                </div>
+                <div class="all-cart-1-text-name">
+                    <p class="all-cart-1-text-name-phone">AirPods Pro 2 Generation</p>
+                    <p class="a-c-1-t-n-1"><i class="ph ph-currency-inr"></i>24,999</p>
+                </div>
+            </div>
+        </div>
+
+       </div>
+    </div>
+</section>
+
+
+
+ <!-- Footer -->
+ <footer>
+    <div class="footer-container">
+        <div class="footer-section">
+            <h3>Office Location</h3>
+            <p>500 Terry Francois Street<br>San Francisco, CA 94158</p>
+            <p>info@mysite.com</p>
+            <p>123-456-7890</p>
+        </div>
+        <div class="footer-section">
+            <h3>Shop</h3>
+            <p onclick="window.location.href = 'index.html';">Shop All</p>
+            <p onclick="window.location.href = 'mobile.html';">Mobile</p>
+            <p onclick="window.location.href = 'tablet.html';">Tablets</p>
+            <p onclick="window.location.href = 'headphone.html';">Audio</p>
+            <p  onclick="window.location.href = 'laptop.html';">Laptop</p>
+            <p onclick="window.location.href = 'smartwatch.html';">SmartWatch</p>
+            <p>Accessories</p>
+        </div>
+        <div class="footer-section">
+            <h3>Customer Support</h3>
+            <p>Contact Us</p>
+            <p>Help Center</p>
+            <p>About Us</p>
+        </div>
+        <div class="footer-section">
+            <h3>Policy</h3>
+            <p>Shipping & Returns</p>
+            <p>Terms & Conditions</p>
+            <p>Payment Methods</p>
+            <p>FAQ</p>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../JavaScript/iphone15.js"></script>
+<script src="../JavaScript/mainproductdetailpage.js"></script>
+ 
+<script src="../JavaScript/index"></script>
+</body>
+</html>
+                 

@@ -314,3 +314,21 @@ searchBtn.addEventListener('click', function(){
         searchBox.value = '';  // Clear search box after redirect
     }
 });
+
+
+
+
+
+function toggleViewMore() {
+    const productCart = document.querySelector('.all-product-cart');
+    const viewMoreBtn = document.querySelector('.view-more-btn-a');
+    
+    productCart.classList.toggle('expanded');
+
+    // Toggle button text between "View More" and "View Less"
+    if (productCart.classList.contains('expanded')) {
+        viewMoreBtn.textContent = "View Less";
+    } else {
+        viewMoreBtn.textContent = "View More";
+    }
+}

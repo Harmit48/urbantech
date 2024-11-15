@@ -211,33 +211,33 @@ const suggestionsContainer = document.querySelector('.suggestions-container');
 
 // Product Data with Specific URLs
 const productData = [
-    { name: "iPhone 15",                        price: "71,999",    image: "./Img/HomeImage/Apple/iPhone15.png",                  url: "./html/iphone15.html",                                brand: "apple"     },
-    { name: "iPhone 15 Pro",                    price: "1,39,900",  image: "./Img/HomeImage/Apple/iPhone15Pro.png",               url: "./html/iphone15pro.html",                             brand: "apple"     },
-    { name: "iPhone 15 Pro Max",                price: "1,50,090",  image: "./Img/HomeImage/Apple/iPhone15ProMax.png",            url: "./html/iphone15promax.html",                          brand: "apple"     },
-    { name: "iPad Air 5 Generation",            price: "74,900",    image: "./Img/HomeImage/Apple/iPadAir5Gen.png",               url: "./html/ipadair5generation.html",                      brand: "apple"     },
-    { name: "AirPods Pro 2 Generation",         price: "23,590",    image: "./Img/HomeImage/Apple/airPodsPro2Gen.png",            url: "./html/airpodspro2generation.html",                   brand: "apple"     },
-    { name: "Macbook Air 2022 M2 Chip",         price: "92,900",    image: "./Img/HomeImage/Apple/Macbook2022M2.png",             url: "./html/macbookair2022m2chip.html",                    brand: "apple"     },
-    { name: "20W Charger for iPhone",           price: "699",       image: "./Img/HomeImage/Apple/appleCharger.png",              url: "./html/20wcharger.html",                              brand: "apple"     },
-    { name: "Acer Nitro V Gaming Laptop",       price: "77,990",    image: "./Img/HomeImage/ProductAUT/AcerNitroVGaming.png",     url: "./html/acerNitroVGamingLaptop.html",                  brand: "acer"      },
-    { name: "Ambrane Unbreakable 60W",          price: "199",       image: "./Img/HomeImage/ProductAUT/AmbraneUnbreakable.png",   url: "./html/AmbraneUnbreakable60W.html",                   brand: "Ambrane"   },
-    { name: "ASUS Vivobook 15",                 price: "38,990",    image: "./Img/HomeImage/ProductAUT/AsusVivoBook15.png",       url: "./html/ASUSVivobook15IntelCorei7-12650H12thGen.html", brand: "Asus"      },
-    { name: "boAt Airdopes 141 Bluetooth",      price: "999",       image: "./Img/HomeImage/ProductAUT/boatAirPodes141.png",      url: "./html/boAtAirdopes141Bluetooth.html",                brand: "boAt"      },
-    { name: "Boult Audio Z40 Pro",              price: "1,599",     image: "./Img/HomeImage/ProductAUT/boultAudioZ40Pro.png",                                                                 brand: "Boult"     },
-    { name: "Dell 15 Laptop",                   price: "46,990",    image: "./Img/HomeImage/ProductAUT/Dell15.png",                                                                           brand: "Dell"      },
-    { name: "Fire-Boltt Ninja Call Pro Plus",   price: "1,199",     image: "./Img/HomeImage/ProductAUT/FireBolttNinja.png",                                                                   brand: "FireBoltt" },
-    { name: "Honeywell Suono P2100",            price: "1,649",     image: "./Img/HomeImage/ProductAUT/HoneywellSuonoP2100.png",                                                              brand: "Honeywell" },
-    { name: "HONOR MagicBook X16 Pro",          price: "58,990",    image: "./Img/HomeImage/ProductAUT/HONORMagicBookX16.png",                                                                brand: "Honor"     },
-    { name: "HP Laptop 14s",                    price: "38,490",    image: "./Img/HomeImage/ProductAUT/HP14s.png",                                                                            brand: "Hp"        },
-    { name: "HP Laptop 15s",                    price: "37,689",    image: "./Img/HomeImage/ProductAUT/HP15s.png",                                                                            brand: "Hp"        },
-    { name: "iQOOZ7Pro 5G",                     price: "23,999",    image: "./Img/HomeImage/ProductAUT/IQOOZ7Pro.png",                                                                        brand: "Iqoo"      },
-    { name: "IQOOZ9 5G",                        price: "19,999",    image: "./Img/HomeImage/ProductAUT/IQOOZ9.png",                                                                           brand: "Iqoo"      },
-    { name: "JBL Tune Beam",                    price: "5,498",     image: "./Img/HomeImage/ProductAUT/jblTuneBeam.png",                                                                      brand: "Jbl"       },
-    { name: "Lenovo IdeaPad 1 AMD",             price: "37,600",    image: "./Img/HomeImage/ProductAUT/LenovoIdeaPad1.png",                                                                   brand: "Lenovo"    },       
-    { name: "MI Power Bank 3i 20000mAh",        price: "2,109",     image: "./Img/HomeImage/ProductAUT/MIPowerBank3i20000mAH.png",                                                            brand: "Mi"        },
-    { name: "OnePlus 12R",                      price: "39,999",    image: "./Img/HomeImage/ProductAUT/onePlus12R.png",                                                                       brand: "OnePlus"   },
-    { name: "OnePlus Nord CE 3 Lite 5G",        price: "17,999",    image: "./Img/HomeImage/ProductAUT/onePlusNordCE3Lite.png",                                                               brand: "OnePlus"   },
-    { name: "realme Buds T300",                 price: "2,149",     image: "./Img/HomeImage/ProductAUT/onePlusNordBuds2.png",                                                                 brand: "OnePlus"   },
-    { name: "Samsung 25W",                      price: "999",       image: "./Img/HomeImage/ProductAUT/Samsung25W.png",                                                                       brand: "Samsung"   }
+    { name: "iPhone 15",                        price: "71,999",    image: "../Img/HomeImage/Apple/iPhone15.png",                  url: "../html/iphone15.html",                                brand: "apple"     },
+    { name: "iPhone 15 Pro",                    price: "1,39,900",  image: "../Img/HomeImage/Apple/iPhone15Pro.png",               url: "../html/iphone15pro.html",                             brand: "apple"     },
+    { name: "iPhone 15 Pro Max",                price: "1,50,090",  image: "../Img/HomeImage/Apple/iPhone15ProMax.png",            url: "../html/iphone15promax.html",                          brand: "apple"     },
+    { name: "iPad Air 5 Generation",            price: "74,900",    image: "../Img/HomeImage/Apple/iPadAir5Gen.png",               url: "../html/ipadair5generation.html",                      brand: "apple"     },
+    { name: "AirPods Pro 2 Generation",         price: "23,590",    image: "../Img/HomeImage/Apple/airPodsPro2Gen.png",            url: "../html/airpodspro2generation.html",                   brand: "apple"     },
+    { name: "Macbook Air 2022 M2 Chip",         price: "92,900",    image: "../Img/HomeImage/Apple/Macbook2022M2.png",             url: "../html/macbookair2022m2chip.html",                    brand: "apple"     },
+    { name: "20W Charger for iPhone",           price: "699",       image: "../Img/HomeImage/Apple/appleCharger.png",              url: "../html/20wcharger.html",                              brand: "apple"     },
+    { name: "Acer Nitro V Gaming Laptop",       price: "77,990",    image: "../Img/HomeImage/ProductAUT/AcerNitroVGaming.png",     url: "../html/acerNitroVGamingLaptop.html",                  brand: "acer"      },
+    { name: "Ambrane Unbreakable 60W",          price: "199",       image: "../Img/HomeImage/ProductAUT/AmbraneUnbreakable.png",   url: "../html/AmbraneUnbreakable60W.html",                   brand: "Ambrane"   },
+    { name: "ASUS Vivobook 15",                 price: "38,990",    image: "../Img/HomeImage/ProductAUT/AsusVivoBook15.png",       url: "../html/ASUSVivobook15IntelCorei7-12650H12thGen.html", brand: "Asus"      },
+    { name: "boAt Airdopes 141 Bluetooth",      price: "999",       image: "../Img/HomeImage/ProductAUT/boatAirPodes141.png",      url: "../html/boAtAirdopes141Bluetooth.html",                brand: "boAt"      },
+    { name: "Boult Audio Z40 Pro",              price: "1,599",     image: "../Img/HomeImage/ProductAUT/boultAudioZ40Pro.png",                                                                 brand: "Boult"     },
+    { name: "Dell 15 Laptop",                   price: "46,990",    image: "../Img/HomeImage/ProductAUT/Dell15.png",                                                                           brand: "Dell"      },
+    { name: "Fire-Boltt Ninja Call Pro Plus",   price: "1,199",     image: "../Img/HomeImage/ProductAUT/FireBolttNinja.png",                                                                   brand: "FireBoltt" },
+    { name: "Honeywell Suono P2100",            price: "1,649",     image: "../Img/HomeImage/ProductAUT/HoneywellSuonoP2100.png",                                                              brand: "Honeywell" },
+    { name: "HONOR MagicBook X16 Pro",          price: "58,990",    image: "../Img/HomeImage/ProductAUT/HONORMagicBookX16.png",                                                                brand: "Honor"     },
+    { name: "HP Laptop 14s",                    price: "38,490",    image: "../Img/HomeImage/ProductAUT/HP14s.png",                                                                            brand: "Hp"        },
+    { name: "HP Laptop 15s",                    price: "37,689",    image: "../Img/HomeImage/ProductAUT/HP15s.png",                                                                            brand: "Hp"        },
+    { name: "iQOOZ7Pro 5G",                     price: "23,999",    image: "../Img/HomeImage/ProductAUT/IQOOZ7Pro.png",                                                                        brand: "Iqoo"      },
+    { name: "IQOOZ9 5G",                        price: "19,999",    image: "../Img/HomeImage/ProductAUT/IQOOZ9.png",                                                                           brand: "Iqoo"      },
+    { name: "JBL Tune Beam",                    price: "5,498",     image: "../Img/HomeImage/ProductAUT/jblTuneBeam.png",                                                                      brand: "Jbl"       },
+    { name: "Lenovo IdeaPad 1 AMD",             price: "37,600",    image: "../Img/HomeImage/ProductAUT/LenovoIdeaPad1.png",                                                                   brand: "Lenovo"    },       
+    { name: "MI Power Bank 3i 20000mAh",        price: "2,109",     image: "../Img/HomeImage/ProductAUT/MIPowerBank3i20000mAH.png",                                                            brand: "Mi"        },
+    { name: "OnePlus 12R",                      price: "39,999",    image: "../Img/HomeImage/ProductAUT/onePlus12R.png",                                                                       brand: "OnePlus"   },
+    { name: "OnePlus Nord CE 3 Lite 5G",        price: "17,999",    image: "../Img/HomeImage/ProductAUT/onePlusNordCE3Lite.png",                                                               brand: "OnePlus"   },
+    { name: "realme Buds T300",                 price: "2,149",     image: "../Img/HomeImage/ProductAUT/onePlusNordBuds2.png",                                                                 brand: "OnePlus"   },
+    { name: "Samsung 25W",                      price: "999",       image: "../Img/HomeImage/ProductAUT/Samsung25W.png",                                                                       brand: "Samsung"   }
     // Add more products as needed
 ];
 
@@ -264,7 +264,7 @@ searchBox.addEventListener('keyup', function(event) {
     
     if (event.key === "Enter" && query) {
         // Redirect to search results page
-        window.location.href = `./html/results.html?search=${query}`;
+        window.location.href = `../html/results.html?search=${query}`;
         searchBox.value = ''; // Clear search box after redirect
     } else {
         // Clear previous suggestions
@@ -310,7 +310,7 @@ searchBtn.addEventListener('click', function(){
         search.classList.add('active');
         searchBox.focus();
     } else if (query) {
-        window.location.href = `./html/results.html?search=${query}`;
+        window.location.href = `../html/results.html?search=${query}`;
         searchBox.value = '';  // Clear search box after redirect
     }
 });
