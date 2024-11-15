@@ -1107,3 +1107,16 @@ body::-webkit-scrollbar {
 .all-product-cart:hover>.all-cat-1:not(:hover) {
   filter: grayscale(100%) blur(1px);
 }
+
+/* iphone 16 baner */
+
+.baner{
+  width: 100%;
+  height: 100%;
+  margin-bottom: 100px;
+}
+
+img{
+  width: 100%;
+  height: 100%;
+}
