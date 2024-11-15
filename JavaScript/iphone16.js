@@ -42,63 +42,63 @@ thumbnailImages.forEach(thumbnail => {
 const colorImages = {
     black: {
         images: [
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/1.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/2.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/3.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/4.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/5.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/6.jpg'
+            '../Img/ProductDetailsImg/Mobiles/iphone16/b1.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/b2.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/b3.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/b4.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/b5.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/b6.jpg'
         ],
-        name: 'Apple iPhone 15 (128 GB) - Black',
-        price: '₹71,999'
-    },
-    blue: {
-        images: [
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/b1.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/b2.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/b3.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/b4.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/b5.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/b6.jpg'
-        ],
-        name: 'Apple iPhone 15 (128 GB) - Blue',
-        price: '₹71,999'
-    },
-    green: {
-        images: [
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/g1.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/g2.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/g3.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/g4.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/g5.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/g6.jpg'
-        ],
-        name: 'Apple iPhone 15 (128 GB) - Green',
-        price: '₹71,999'
+        name: 'Apple iPhone 16 (128 GB) - Black',
+        price: '₹79,900'
     },
     pink: {
         images: [
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/p1.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/p2.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/p3.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/p4.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/p5.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/p6.jpg'
+            '../Img/ProductDetailsImg/Mobiles/iphone16/p1.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/p2.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/p3.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/p4.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/p5.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/p6.jpg'
         ],
-        name: 'Apple iPhone 15 (128 GB) - Pink',
-        price: '₹71,999'
+        name: 'Apple iPhone 16 (128 GB) - Pink',
+        price: '₹79,900'
     },
-    yellow: {
+    teal: {
         images: [
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/y1.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/y2.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/y3.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/y4.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/y5.jpg',
-            '../Img/ProductDetailsImg/Mobiles/Iphone15/y6.jpg'
+            '../Img/ProductDetailsImg/Mobiles/iphone16/g1.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/g2.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/g3.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/g4.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/g5.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/g6.jpg'
         ],
-        name: 'Apple iPhone 15 (128 GB) - Yellow',
-        price: '₹71,999'
+        name: 'Apple iPhone 16 (128 GB) - Teal',
+        price: '₹79,900'
+    },
+    ultramarine: {
+        images: [
+            '../Img/ProductDetailsImg/Mobiles/iphone16/1.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/2.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/3.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/4.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/5.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/6.jpg'
+        ],
+        name: 'Apple iPhone 16 (128 GB) - Ultramarine',
+        price: '₹79,900'
+    },
+    white: {
+        images: [
+            '../Img/ProductDetailsImg/Mobiles/iphone16/w1.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/w2.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/w3.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/w4.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/w5.jpg',
+            '../Img/ProductDetailsImg/Mobiles/iphone16/w6.jpg'
+        ],
+        name: 'Apple iPhone 16 (128 GB) - White',
+        price: '₹79,900'
     }
 };
 

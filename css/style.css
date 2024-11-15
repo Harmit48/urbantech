@@ -361,13 +361,13 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-height: 490px; /* Initial collapsed height */
+  max-height: 800px; /* Initial collapsed height */
   overflow: hidden;
   transition: max-height 0.7s ease-in-out;
 }
 
 .all-product-cart.expanded {
-  max-height: 1200px; /* Expanded height */
+  max-height: 1700px; /* Expanded height */
 }
 
 .all-product-text {
@@ -388,7 +388,7 @@ body::-webkit-scrollbar {
   /* gap: 30px 51px; */
   justify-content: space-between;
   flex-wrap: wrap;
-  max-height: 490px;
+  max-height: 950px;
   overflow: hidden;
   transition: max-height 0.7s ease-in;
 }
