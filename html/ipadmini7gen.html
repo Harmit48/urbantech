@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>iPad Mini (A17 Pro)</title>
+    <!-- favbicon -->
+    <link rel="icon" type="image/x-icon" href="../Img/HomeImage/favicon.png">
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto+Condensed:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+   <!-- Online Icon Link -->
+
+   <link rel="stylesheet" href="../css/productdetails.css">
+   <link rel="stylesheet" href="../css/tablet.css">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+   <!-- <link rel="stylesheet" href="../css/nav.css"> -->
+</head>
+   <body>
+   <!-- Navbar -->
+<section>
+   <div class="nav-1">
+       <div class="navbar-left">
+        <div class="logo" onclick="window.location.href = '../index.html';">URBANTECH</div>
+       </div>
+       <div class="navbar-right">
+           <div class="searchBox">
+               <input class="searchInput" type="text" name="" placeholder="Search">
+               <button class="searchButton" href="#"><i class="ph-bold ph-magnifying-glass"></i></button>
+           </div>
+           <!-- Shop button -->
+           <div class="playground">
+               <button class="btn btn-1-3-4" id="shop-button">
+                   <i class="ph ph-tote"></i>
+                   <span class="shop-con cart-icon">Shop</span>
+               </button>
+               <div class="dropdown-content" id="dropdown-content">
+                   <a href="#">All Product</a>
+                   <a href="../html/mobile.html">Mobile</a>
+                   <a href="../html/laptop.html">Laptop</a>
+                   <a href="../html/tablet.html">Tablets & iPads</a>
+                   <a href="../html/HeadPhone.html">Audio Product</a>
+                   <a href="../html/smartwatch.html">SmartWatches</a>
+                   <a href="../html/accessories.html">Accessories</a>
+               </div>
+           </div>
+           <!-- Profile Button -->
+           <div class="playground-1">
+               <button class="btn-1 btn-1-3-4" id="profile-button">
+                   <i class="ph-bold ph-user cart-icon-1"></i>
+                   <span class="shop-con-1">Profile</span>
+               </button>
+               <div class="dropdown-content-1" id="dropdown-content-1">
+                   <a href="../html/Login.html">Login</a>
+                   <a href="../html/my profile.html">My Profile</a>
+                   <a href="#">My Orders</a>
+                   <a href="#">Cart</a>
+                   <a href="#">Contact Us</a>
+                   <a href="../html/servicerequestform.html">My Service Requests</a>
+               </div>
+       </div>
+             <!-- Cart Icon -->
+             <div class="cart-icon-container">
+               <button class="btn-1 btn-1-3-4" id="cart-button">
+                   <i class="ph-bold ph-shopping-cart"></i>
+               </button>
+           </div>
+       </div>
+   </div>
+</section>
+
+<!-- Cart Sidebar  for nav bar icon-->
+<div id="cart-sidebar" class="cart-sidebar">
+   <div class="cart-header">
+       <h2>Shopping Cart</h2>
+       <span class="close-cart" onclick="closeCartone()">&times;</span>
+   </div>
+   <div class="cart-content" id="cart-content">
+       <!-- Cart items will be dynamically added here -->
+   </div>
+   <div class="cart-footer">
+       <p class="t-i">Total Items: <span id="total-items">0</span></p>
+       <p class="t-a">Total Amount: ₹<span id="total-amount">0</span></p>
+       <button class="btn-proceed" onclick="proceedToCheckout()">Proceed to Buy</button>
+   </div>
+</div>
+       </div>
+   </div>
+</section>
+<section class="container">
+   <!-- Section 1: Thumbnails -->
+       <div class="thumbnails-section">
+           <img src="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b1.png" alt="Thumbnail 1" class="thumbnail" data-full="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b1.png">
+           <img src="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b2.png" alt="Thumbnail 2" class="thumbnail" data-full="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b2.png">
+           <img src="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b3.png" alt="Thumbnail 3" class="thumbnail" data-full="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b3.png">
+           <img src="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b4.png" alt="Thumbnail 4" class="thumbnail" data-full="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b4.png">
+           <img src="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b5.jpeg" alt="Thumbnail 5" class="thumbnail" data-full="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b5.jpeg">
+           <img src="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b6.jpeg" alt="Thumbnail 5" class="thumbnail" data-full="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b6.jpeg">
+       </div>
+                
+<!-- Section 2: Main Image -->
+   <div class="main-image-section">
+       <div class="picture" id="picture">
+           <img src="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b1.png" alt="Apple iPhone 15" class="main-product-image" id="mainImage">
+       <div id="zoom-window"></div>
+       </div>
+   </div>
+                
+<!-- Section 3: Price and Details -->
+   <div class="product-details">
+       <h1>Apple iPad Mini (A17 Pro) - Blue - 128 GB</h1><hr>
+           <div class="price-section">
+               <p class="price"><span class="discount">-2%</span> ₹48,899</p>
+               <p class="original-price">M.R.P.: <del>₹49,900</del></p>
+               <p class="inclusive">Inclusive of all taxes</p>
+               <p class="emi">EMI starts at ₹2,394. & No Cost EMI available</p><hr>
+           </div>
+                
+<!-- Section 4: Color and Size Options -->
+   <div class="color-selection">
+       <p>Colour:</p>
+       <div class="color-option" data-color="blue"> <img src="../Img/ProductDetailsImg/Tablets/ipadmini7gen/b1.png"> </div>
+       <div class="color-option" data-color="purple"> <img src="../Img/ProductDetailsImg/Tablets/ipadmini7gen/p1.png"> </div>
+       <div class="color-option" data-color="spacegray"> <img src="../Img/ProductDetailsImg/Tablets/ipadmini7gen/g1.png"> </div>
+       <div class="color-option" data-color="starlight"> <img src="../Img/ProductDetailsImg/Tablets/ipadmini7gen/s1.png"> </div>
+   </div>
+   <div class="size-selection">
+       <p>Size:</p>
+       <button class="size-option" data-size="128GB">128 GB</button>
+       <button class="size-option" data-size="128GB">256 GB</button>
+       <button class="size-option" data-size="128GB">512 GB</button>
+   </div>
+   <div class="btn-1-p-d">
+       <button class="btn-1-1" id="add-to-cart-btn">Add To Cart</button> <!-- Add an ID to this button -->
+       <button class="btn-1-2">Buy Now</button>
+   </div>
+
+   
+   <div class="accordion">
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion1" class="accordion-checkbox">
+        <label class="accordion-button" for="accordion1">
+            Product Details
+            <!-- <span class="icon-5">+</span> -->
+        </label>
+        <div class="accordion-content">
+            <table>
+                <tr>
+                    <td>Brand :</td>
+                    <td>Apple</td>
+                </tr>
+                <tr>
+                    <td>Model Name :</td>
+                    <td>iPad Air (5th Generation)</td>
+                </tr>
+                <tr>
+                    <td>Display :</td>
+                    <td>6.7-inch Super Retina XDR Display</td>
+                </tr>
+                <tr>
+                    <td>Processor :</td>
+                    <td>M1 Chip</td>
+                </tr>
+                <tr>
+                    <td>Operating System :</td>
+                    <td>iPadOS 15</td>
+                </tr>
+                <tr>
+                    <td>Cellular Technology :</td>
+                    <td>5G</td>
+                </tr>
+                <tr>
+                    <td>Network Service Provider :</td>
+                    <td>Unlocked (varies by retailer)</td>
+                </tr>
+                <tr>
+                    <td>Battery Life:</td>
+                    <td>Up to 10 hours</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="accordion-item">
+        <input type="checkbox" id="accordion2" class="accordion-checkbox">
+        <label class="accordion-button" for="accordion2">
+            Technical Details
+
+            <!-- <span class="icon">+</span> -->
+        </label>
+        <div class="accordion-content">
+            <table>
+                <tr>
+                    <td>Ram :</td>
+                    <td>8GB</td>
+                </tr>
+                <tr>
+                    <td>Storage :</td>
+                    <td>64GB, 256GB</td>
+                </tr>
+                <tr>
+                    <td>Expandable Storage :</td>
+                    <td>Not supported</td>
+                </tr>
+                <tr>
+                    <td>Rear Camera :</td>
+                    <td>12MP wide camera</td>
+                </tr>
+                <tr>
+                    <td>Charging :</td>
+                    <td>USB-C, 20W fast charging</td>
+                </tr>
+                <tr>
+                    <td>Dimensions :</td>
+                    <td>247.6 x 178.5 x 6.1 mm</td>
+                </tr>
+                <tr>
+                    <td>Weight :</td>
+                    <td>461g (Wi-Fi), 462g (Wi-Fi + Cellular)</td>
+                </tr>
+                <tr>
+                    <td>Fingerprint Sensor :</td>
+                    <td>Integrated into the top button</td>
+                </tr>
+                <tr>
+                    <td>GPS :</td>
+                    <td>GPS/GNSS (Wi-Fi + Cellular model)</td>
+                </tr>
+                <tr>
+                    <td>Audio Jack :</td>
+                    <td>Not available</td>
+                </tr>
+                <tr>
+                    <td>Operating System Updates :</td>
+                    <td> iPadOS 16</td>
+                </tr>
+                <tr>
+                    <td>Water Resistance :</td>
+                    <td>Not Rated</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>    
+                
+<!-- Cart Sidebar for add to cart button -->
+   <div id="cart-sidebar" class="cart-sidebar">
+       <div class="cart-header">
+           <h2>Shopping Cart</h2>
+           <span class="close-cart" onclick="closeCart()">&times;</span>
+       </div>
+       <div class="cart-content" id="cart-content">
+   <!-- Cart items will be dynamically added here -->
+       </div>
+       <div class="cart-footer">
+           <p>Total Items: <span id="total-items">0</span></p>
+           <p>Total Amount: ₹<span id="total-amount">0</span></p>
+           <button class="btn-proceed" onclick="proceedToCheckout()">Proceed to Buy</button>
+       </div>
+   </div>
+</div>
+</section>
+
+<!-- other Product -->
+<section>
+    <div class="all-product">
+        <div class="all-product-cart">
+         <!-- 1 -->
+         <div class="all-cat-1">
+            <div class="all-cart-1-image">
+                <img src="../Img/TabletsAndiPads/iPads/iPad9thGen.png" onclick="window.location.href = 'macbookairm1chip.html';">
+            </div>
+            <div class="all-cart-1-text">
+                <div class="all-cart-1-text-icon">
+                    <i class="ph ph-shopping-cart all-cart-1-icon" id="add-to-cart-btn"></i>
+                </div>
+                <div class="all-cart-1-text-name">
+                    <p class="all-cart-1-text-name-phone">Apple iPad (9th Generation)</p>
+                    <p class="a-c-1-t-n-1">₹28,999</p>
+                </div>
+            </div>
+        </div>
+    <!-- 2 -->
+    <div class="all-cat-1">
+        <div class="all-cart-1-image">
+            <img src="../Img/TabletsAndiPads/iPads/iPad10thGenA14.png">
+        </div>
+        <div class="all-cart-1-text">
+            <div class="all-cart-1-text-icon">
+                <i class="ph ph-shopping-cart all-cart-1-icon" id="add-to-cart-btn"></i>
+            </div>
+            <div class="all-cart-1-text-name">
+                <p class="all-cart-1-text-name-phone">Apple iPad (10th Generation)</p>
+                <p class="a-c-1-t-n-1">₹34,900</p>
+            </div>
+        </div>
+    </div>
+    <!-- 3 -->
+    <div class="all-cat-1">
+        <div class="all-cart-1-image">
+            <img src="../Img/TabletsAndiPads/iPads/iPadAir5thGen.png" onclick="window.location.href = 'ipadair5generation.html';">
+        </div>
+        <div class="all-cart-1-text">
+            <div class="all-cart-1-text-icon">
+                <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+            </div>
+            <div class="all-cart-1-text-name">
+                <p class="all-cart-1-text-name-phone">Apple iPad Air (5th Generation)</p>
+                <p class="a-c-1-t-n-1">₹60,900</p>
+            </div>
+        </div>
+    </div>
+    <!-- 4 -->
+    <div class="all-cat-1">
+        <div class="all-cart-1-image">
+            <img src="../Img/TabletsAndiPads/iPads/iPadMini6thGenA15.png">
+        </div>
+        <div class="all-cart-1-text">
+            <div class="all-cart-1-text-icon">
+                <i class="ph ph-shopping-cart all-cart-1-icon"></i>
+            </div>
+            <div class="all-cart-1-text-name">
+                <p class="all-cart-1-text-name-phone">Apple iPad Mini (6th Generation)</p>
+                <p class="a-c-1-t-n-1">₹48,399</p>
+            </div>
+        </div>
+    </div>
+
+       </div>
+    </div>
+</section>
+
+
+
+<!-- Footer -->
+<footer>
+   <div class="footer-container">
+       <div class="footer-section">
+           <h3>Office Location</h3>
+           <p>500 Terry Francois Street<br>San Francisco, CA 94158</p>
+           <p>info@mysite.com</p>
+           <p>123-456-7890</p>
+       </div>
+       <div class="footer-section">
+           <h3>Shop</h3>
+           <p onclick="window.location.href = 'index.html';">Shop All</p>
+           <p onclick="window.location.href = 'mobile.html';">Mobile</p>
+           <p onclick="window.location.href = 'tablet.html';">Tablets</p>
+           <p onclick="window.location.href = 'headphone.html';">Audio</p>
+           <p  onclick="window.location.href = 'laptop.html';">Laptop</p>
+           <p onclick="window.location.href = 'smartwatch.html';">SmartWatch</p>
+           <p>Accessories</p>
+       </div>
+       <div class="footer-section">
+           <h3>Customer Support</h3>
+           <p>Contact Us</p>
+           <p>Help Center</p>
+           <p>About Us</p>
+       </div>
+       <div class="footer-section">
+           <h3>Policy</h3>
+           <p>Shipping & Returns</p>
+           <p>Terms & Conditions</p>
+           <p>Payment Methods</p>
+           <p>FAQ</p>
+       </div>
+   </div>
+</footer>
+
+<script src="https://unpkg.com/@phosphor-icons/web"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="../JavaScript/ipadmini7gen.js"></script>
+<script src="../JavaScript/mainproductdetailpage.js"></script>
+</body>
+</html>
+                
